@@ -4,3 +4,10 @@ now it can play simply just for battle
 2.1 version is to update balttle algorithm:
 enemy status
 enemy typy(different ability)
+
+2.2 version to update the shopping system
+heal bottom     heal 5 HP     5 coin
+bean soup       heal 12 HP    10 coin
+add two buff item 
+attack blessing      increase STR 1                 99 coin
+defense blessing     increase phy&mag defense 1     99 coin
