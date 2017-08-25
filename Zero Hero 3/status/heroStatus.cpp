@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+
 #include "heroStatus.h"
 
 HeroStatus::HeroStatus(){

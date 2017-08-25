@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "field.h"
 
 using namespace std;
@@ -20,15 +21,15 @@ Field::~Field(){
 
 //to print the whole world
 void Field::printField(){
-	cout <<"━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	cout << "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁" << endl;
 	for(int i = 0; i < 10; i++){
-		cout << "╏"; 
+		cout << "╏";
 		for (int j = 0; j < 10; j++){
 			cout << " " << map[i][j];
 		}
 		cout << "╏" << endl;
 	}
-	cout <<"━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	cout << "━━━━━━━━━━━━━━━━━━━━━━" << endl;
 }
 
 void Field::getHeroLoc(){
@@ -39,4 +40,38 @@ void Field::getHeroLoc(){
 	heroLocX = heroLocX % 10;
 	heroLocY = heroLocY % 10;
 	map[heroLocX][heroLocY] = '0';
+}
+
+void Field::controlPanel(){
+    char command;
+    cin >> command;
+    system("clear");
+    if(command == 'w') {
+    	if(heroLocX > 0){
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocX--;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    else if(command == 's') {
+    	if(heroLocX < 9){
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocX++;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    else if(command == 'a') {
+    	if(heroLocY > 0){
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocY--;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    else if(command == 'd') {
+    	if(heroLocY < 9){
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocY++;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
 }
