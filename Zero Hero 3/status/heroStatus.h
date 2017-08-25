@@ -6,6 +6,7 @@ private:
 	int heroHPMax;
 	int heroHPNow;
 	int EXP;
+	int coin;
 	int levelUpEXP;
 	int level;
 	int STR; 
@@ -18,6 +19,9 @@ private:
 public:
 	HeroStatus();
 	~HeroStatus();
+	int getHpNow();
+	int getHpMax();
+	int getCoin();
 };
 
 #endif

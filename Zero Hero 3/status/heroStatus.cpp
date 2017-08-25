@@ -7,6 +7,7 @@ HeroStatus::HeroStatus(){
 	heroHPMax = 20;
 	heroHPNow = 20;
 	EXP = 0;
+	coin = 0;
 	levelUpEXP = 20;
 	level = 1;
 	STR = 5; 
@@ -20,4 +21,16 @@ HeroStatus::HeroStatus(){
 
 HeroStatus::~HeroStatus(){
 	
+}
+
+int HeroStatus::getHpNow(){
+	return heroHPNow;
+}
+
+int HeroStatus::getHpMax(){
+	return heroHPMax;
+}
+
+int HeroStatus::getCoin(){
+	return coin;
 }

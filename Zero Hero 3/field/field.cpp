@@ -12,6 +12,7 @@ Field::Field(){
 	}
 	//initial for the hero status
 	heroStatus = new HeroStatus;
+	step = 0;
 }
 
 Field::~Field(){
@@ -30,6 +31,19 @@ void Field::printField(){
 		cout << "╏" << endl;
 	}
 	cout << "━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	step++;
+}
+
+void Field::printHint(){
+	cout << "**********************" << endl;
+	cout << "* Hit i for item bar *" << endl;
+	cout << "**********************" << endl;
+}
+
+void Field::printStatusBar(){
+	cout << "Hp:" << heroStatus->getHpNow() << "/" << heroStatus->getHpMax() << endl;
+	cout << "Coin:" << heroStatus->getCoin() << endl;
+	cout << "Hint H(capital!!!) for hint" << endl;
 }
 
 void Field::getHeroLoc(){
@@ -73,5 +87,8 @@ void Field::controlPanel(){
     		heroLocY++;
     		map[heroLocX][heroLocY] = '0';
     	}
+    }
+    else if(command == 'H'){
+    	printHint();
     }
 }

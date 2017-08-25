@@ -12,6 +12,7 @@ Unable to workout reading without `enter` in c++
 
 
 Version:
-v Alpha
+v Alpha 1.1
 Basic movement
 Map
+add status bar

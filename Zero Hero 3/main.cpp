@@ -27,6 +27,7 @@ int main(int argc, char** argv){
     system("clear");
 	while(finished != true){
 		map->printField();
+		map->printStatusBar();
 		map->controlPanel();
 
 	}

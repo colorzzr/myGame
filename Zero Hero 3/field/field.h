@@ -18,6 +18,8 @@ public:
 	void printField();
 	void getHeroLoc();
 	void controlPanel();
+	void printStatusBar();
+	void printHint();
 };
 
 #endif
