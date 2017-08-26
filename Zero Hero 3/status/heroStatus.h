@@ -20,8 +20,11 @@ public:
 	HeroStatus();
 	~HeroStatus();
 	int getHpNow();
+	void changeHpNow(int val);
 	int getHpMax();
+	void changeHpMax(int val);
 	int getCoin();
+	void changeCoin(int val);
 };
 
 #endif

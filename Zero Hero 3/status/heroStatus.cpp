@@ -27,10 +27,22 @@ int HeroStatus::getHpNow(){
 	return heroHPNow;
 }
 
+void HeroStatus::changeHpNow(int val){
+	heroHPNow = val;
+}
+
 int HeroStatus::getHpMax(){
 	return heroHPMax;
 }
 
+void HeroStatus::changeHpMax(int val){
+	heroHPMax = val;
+}
+
 int HeroStatus::getCoin(){
 	return coin;
+}
+
+void HeroStatus::changeCoin(int val){
+	coin = val;
 }

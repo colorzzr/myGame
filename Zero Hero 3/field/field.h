@@ -15,6 +15,7 @@ private:
 public:
 	Field();
 	~Field();
+	void generateEnemy();
 	void printField();
 	void getHeroLoc();
 	void controlPanel();

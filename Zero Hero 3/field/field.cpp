@@ -20,6 +20,23 @@ Field::~Field(){
 }
 
 
+void Field::generateEnemy(){
+	srand(heroLocX * step);
+	int enemyX = rand() % 10;
+	srand(heroLocY * step);
+	int enemyY = rand() % 10;
+	srand(heroLocY * heroLocX * step);
+	//make probabilaty to 1/5
+	if(rand() % 5 == 1){
+		if(enemyX != heroLocX && enemyY != heroLocY){
+			map[enemyX][enemyY] = '1';
+		}
+		else{
+			map[enemyX + 1][enemyY] = '1';
+		}
+	}
+}
+
 //to print the whole world
 void Field::printField(){
 	cout << "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁" << endl;
@@ -31,6 +48,7 @@ void Field::printField(){
 		cout << "╏" << endl;
 	}
 	cout << "━━━━━━━━━━━━━━━━━━━━━━" << endl;
+	generateEnemy();
 	step++;
 }
 
