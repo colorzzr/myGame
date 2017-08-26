@@ -2,17 +2,12 @@
 #include <iostream>
 #include <cstring>
 #include <cmath>
-#include <time.h>
+
 
 #include "field/field.h"
 
 using namespace std;
 
-
-void sleep(int s) 
-{ 
-    for(int i = 0; i < s * 1000000000; i++); 
-} 
 
 int main(int argc, char** argv){
 	
@@ -35,7 +30,7 @@ int main(int argc, char** argv){
 		map->printField();
 		map->printStatusBar();
 		finished = map->controlPanel();
-
+		system("clear");
 	}
 
 	system("clear");

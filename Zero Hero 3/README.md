@@ -9,7 +9,9 @@ After gcc filename.
 
 Unable to workout reading without `enter` in c++
 
-
+remember a include b, b include c
+when a need use function c,
+we don't have to a include c 
 
 Version:
 v Alpha 1.1

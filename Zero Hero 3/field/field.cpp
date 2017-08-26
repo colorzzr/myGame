@@ -1,8 +1,12 @@
 #include <iostream>
 #include <cstdlib>
+
 #include "field.h"
 
+
 using namespace std;
+
+
 
 Field::Field(){
 	for (int i = 0; i < 10; i++){
@@ -74,20 +78,23 @@ void Field::getHeroLoc(){
 	map[heroLocX][heroLocY] = '0';
 }
 
-bool battleEngage(){
+//note here more battle animation is inside the battle.cpp
+bool Field::battleEngage(){
 	bool finished = false;
 	bool youDie = false;
-	//while(finished == true){
-		cout << "***********************************" << endl;
-    	cout << "*   0         1      *" << endl;
-    	cout << "*  /|\\       /|\\     * attack:" << endl;
-    	cout << "*  / \\       / \\     * defence" << endl;
-	    cout << "***********************************" << endl;
-	//}
+	char command;
+	openAnimation();
+	battleAnimation(heroStatus);
+	while(finished != true){
+		cin >> command;
+		if(command == 'e') break;
+	}
+                    
 
-
-	return true;
+	return youDie;
 }
+
+
 
 bool Field::controlPanel(){
     char command;

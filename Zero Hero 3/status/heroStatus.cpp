@@ -50,3 +50,5 @@ void HeroStatus::changeCoin(int val){
 }
 
 
+
+

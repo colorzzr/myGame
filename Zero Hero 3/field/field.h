@@ -22,7 +22,9 @@ public:
 	void printStatusBar();
 	void printHint();
 	//friend funtion to access the member
-	friend bool battleEngage();
+	bool battleEngage();
 };
+//get a prototype for main using sleep
+void sleep(int s);
 
 #endif

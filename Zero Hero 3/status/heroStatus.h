@@ -25,7 +25,9 @@ public:
 	void changeHpMax(int val);
 	int getCoin();
 	void changeCoin(int val);
-
+	friend void battleAnimation(HeroStatus* heroStatus);
 };
+
+void openAnimation();
 
 #endif
