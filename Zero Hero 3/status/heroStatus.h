@@ -25,6 +25,7 @@ public:
 	void changeHpMax(int val);
 	int getCoin();
 	void changeCoin(int val);
+
 };
 
 #endif

@@ -74,19 +74,38 @@ void Field::getHeroLoc(){
 	map[heroLocX][heroLocY] = '0';
 }
 
-void Field::controlPanel(){
+bool battleEngage(){
+	bool finished = false;
+	bool youDie = false;
+	//while(finished == true){
+		cout << "***********************************" << endl;
+    	cout << "*   0         1      *" << endl;
+    	cout << "*  /|\\       /|\\     * attack:" << endl;
+    	cout << "*  / \\       / \\     * defence" << endl;
+	    cout << "***********************************" << endl;
+	//}
+
+
+	return true;
+}
+
+bool Field::controlPanel(){
     char command;
+    int youDie = false;
     cin >> command;
     system("clear");
     if(command == 'w') {
     	if(heroLocX > 0){
+    		//engage battle
+    		if(map[heroLocX - 1][heroLocY] == '1') youDie = battleEngage(); 
     		map[heroLocX][heroLocY] = '-';
     		heroLocX--;
-    		map[heroLocX][heroLocY] = '0';
+    		map[heroLocX][heroLocY] = '0';   		
     	}
     }
     else if(command == 's') {
     	if(heroLocX < 9){
+    		if(map[heroLocX + 1][heroLocY] == '1') youDie = battleEngage(); 
     		map[heroLocX][heroLocY] = '-';
     		heroLocX++;
     		map[heroLocX][heroLocY] = '0';
@@ -94,6 +113,7 @@ void Field::controlPanel(){
     }
     else if(command == 'a') {
     	if(heroLocY > 0){
+    		if(map[heroLocX][heroLocY - 1] == '1') youDie = battleEngage(); 
     		map[heroLocX][heroLocY] = '-';
     		heroLocY--;
     		map[heroLocX][heroLocY] = '0';
@@ -101,6 +121,7 @@ void Field::controlPanel(){
     }
     else if(command == 'd') {
     	if(heroLocY < 9){
+    		if(map[heroLocX][heroLocY + 1] == '1') youDie = battleEngage(); 
     		map[heroLocX][heroLocY] = '-';
     		heroLocY++;
     		map[heroLocX][heroLocY] = '0';
@@ -109,4 +130,5 @@ void Field::controlPanel(){
     else if(command == 'H'){
     	printHint();
     }
+    return youDie;
 }

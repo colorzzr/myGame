@@ -2,11 +2,17 @@
 #include <iostream>
 #include <cstring>
 #include <cmath>
+#include <time.h>
 
 #include "field/field.h"
 
 using namespace std;
 
+
+void sleep(int s) 
+{ 
+    for(int i = 0; i < s * 1000000000; i++); 
+} 
 
 int main(int argc, char** argv){
 	
@@ -28,10 +34,15 @@ int main(int argc, char** argv){
 	while(finished != true){
 		map->printField();
 		map->printStatusBar();
-		map->controlPanel();
+		finished = map->controlPanel();
 
 	}
 
+	system("clear");
+	cout << "HAHAHAHAH......" << endl;
+	sleep(1);
+	system("clear");
+	cout << "That is the end. I think...." << endl;
    	
    	
 

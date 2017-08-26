@@ -3,6 +3,8 @@
 
 #include "heroStatus.h"
 
+using namespace std;
+
 HeroStatus::HeroStatus(){
 	heroHPMax = 20;
 	heroHPNow = 20;
@@ -46,3 +48,5 @@ int HeroStatus::getCoin(){
 void HeroStatus::changeCoin(int val){
 	coin = val;
 }
+
+

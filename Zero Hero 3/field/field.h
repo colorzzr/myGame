@@ -18,9 +18,11 @@ public:
 	void generateEnemy();
 	void printField();
 	void getHeroLoc();
-	void controlPanel();
+	bool controlPanel();
 	void printStatusBar();
 	void printHint();
+	//friend funtion to access the member
+	friend bool battleEngage();
 };
 
 #endif

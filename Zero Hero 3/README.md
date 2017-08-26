@@ -16,4 +16,4 @@ v Alpha 1.1
 Basic movement
 Map
 add status bar
-generate enemy
+generate enemy and battle animation
