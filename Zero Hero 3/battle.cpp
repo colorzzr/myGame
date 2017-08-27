@@ -2,16 +2,17 @@
 #include <cstdlib>
 
 #include "./status/heroStatus.h"
+#include "./status/enemyStatus.h"
 #include "./extraFunction.h"
 
 using namespace std;
 
 void sleep(int s) ;
-void battleAnimation(HeroStatus* heroStatus){
+void battleAnimation(HeroStatus* heroStatus, EnemyStatus* enemyStatus){
 	cout << "***********************************" << endl;
-   	cout << "*   0         1      *" << endl;
-    cout << "*  /|\\       /|\\     * attack:" << endl;
-    cout << "*  / \\       / \\     * defence" << endl;
+   	cout << "*   0         1      *" << enemyStatus->enemyHPMax << " " << endl;
+    cout << "*  /|\\       /|\\     * attack:" << enemyStatus->attack << endl;
+    cout << "*  / \\       / \\     * defence:" << enemyStatus->defence << endl;
 	cout << "***********************************" << endl;
 	cout << "* HP: " << heroStatus->heroHPNow << " / " << heroStatus->heroHPMax << " * (a)Attack | (i)Items  *" << endl;
 	//change coin to another status later

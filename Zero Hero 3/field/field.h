@@ -2,6 +2,7 @@
 #define FEILD_H
 
 #include "../status/heroStatus.h"
+#include "../status/enemyStatus.h"
 
 class Field{
 private:
@@ -12,6 +13,7 @@ private:
 	//step is not meaningful but to make random location of enemy
 	int step;
 	HeroStatus* heroStatus;
+	EnemyStatus* enemyStatus;
 public:
 	Field();
 	~Field();

@@ -16,6 +16,7 @@ Field::Field(){
 	}
 	//initial for the hero status
 	heroStatus = new HeroStatus;
+	enemyStatus = new EnemyStatus;
 	step = 0;
 }
 
@@ -84,7 +85,7 @@ bool Field::battleEngage(){
 	bool youDie = false;
 	char command;
 	openAnimation();
-	battleAnimation(heroStatus);
+	battleAnimation(heroStatus, enemyStatus);
 	while(finished != true){
 		cin >> command;
 		if(command == 'e') break;

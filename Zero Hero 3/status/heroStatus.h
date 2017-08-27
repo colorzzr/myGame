@@ -1,6 +1,10 @@
 #ifndef HEROSTATUS_H
 #define HEROSTATUS_H
 
+#include "enemyStatus.h"
+
+//for enemyStatus is an argument of function. it need prototype
+class EnemyStatus;
 class HeroStatus{
 private:
 	int heroHPMax;
@@ -25,7 +29,7 @@ public:
 	void changeHpMax(int val);
 	int getCoin();
 	void changeCoin(int val);
-	friend void battleAnimation(HeroStatus* heroStatus);
+	friend void battleAnimation(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
 };
 
 void openAnimation();
