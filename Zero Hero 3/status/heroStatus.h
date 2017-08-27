@@ -23,13 +23,15 @@ private:
 public:
 	HeroStatus();
 	~HeroStatus();
-	int getHpNow();
-	void changeHpNow(int val);
-	int getHpMax();
-	void changeHpMax(int val);
+	int getHeroHpNow();
+	void changeHeroHpNow(int val);
+	int getHeroHpMax();
+	void changeHeroHpMax(int val);
 	int getCoin();
 	void changeCoin(int val);
-	friend void battleAnimation(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
+	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
+	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
+	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 };
 
 void openAnimation();

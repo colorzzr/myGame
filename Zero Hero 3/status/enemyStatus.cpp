@@ -18,3 +18,7 @@ EnemyStatus::~EnemyStatus(){
 void EnemyStatus::enemyLvUp(){
 	return;
 }
+
+int EnemyStatus::getEnemyHpMax(){
+	return enemyHPMax;
+}

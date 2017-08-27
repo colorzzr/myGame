@@ -34,9 +34,14 @@ int main(int argc, char** argv){
 	}
 
 	system("clear");
-	cout << "HAHAHAHAH......" << endl;
+	cout << "...\n" << endl;
 	sleep(1);
-	system("clear");
+	cout << ".....\n" << endl;
+	sleep(1);
+	cout << ".........\n" << endl;
+	sleep(1);
+	cout << "HAHAHAHAH......\n" << endl;
+	sleep(1);
 	cout << "That is the end. I think...." << endl;
    	
    	

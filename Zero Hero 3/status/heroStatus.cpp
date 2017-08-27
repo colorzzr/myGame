@@ -7,7 +7,7 @@ using namespace std;
 
 HeroStatus::HeroStatus(){
 	heroHPMax = 20;
-	heroHPNow = 20;
+	heroHPNow = 6;
 	EXP = 0;
 	coin = 0;
 	levelUpEXP = 20;
@@ -25,19 +25,19 @@ HeroStatus::~HeroStatus(){
 	
 }
 
-int HeroStatus::getHpNow(){
+int HeroStatus::getHeroHpNow(){
 	return heroHPNow;
 }
 
-void HeroStatus::changeHpNow(int val){
+void HeroStatus::changeHeroHpNow(int val){
 	heroHPNow = val;
 }
 
-int HeroStatus::getHpMax(){
+int HeroStatus::getHeroHpMax(){
 	return heroHPMax;
 }
 
-void HeroStatus::changeHpMax(int val){
+void HeroStatus::changeHeroHpMax(int val){
 	heroHPMax = val;
 }
 

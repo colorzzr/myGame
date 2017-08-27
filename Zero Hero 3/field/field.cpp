@@ -32,7 +32,7 @@ void Field::generateEnemy(){
 	int enemyY = rand() % 10;
 	srand(heroLocY * heroLocX * step);
 	//make probabilaty to 1/5
-	if(rand() % 5 == 1){
+	if(rand() % 2 == 1){
 		if(enemyX != heroLocX && enemyY != heroLocY){
 			map[enemyX][enemyY] = '1';
 		}
@@ -64,7 +64,7 @@ void Field::printHint(){
 }
 
 void Field::printStatusBar(){
-	cout << "Hp:" << heroStatus->getHpNow() << "/" << heroStatus->getHpMax() << endl;
+	cout << "Hp:" << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << endl;
 	cout << "Coin:" << heroStatus->getCoin() << endl;
 	cout << "Hint H(capital!!!) for hint" << endl;
 }
@@ -83,12 +83,26 @@ void Field::getHeroLoc(){
 bool Field::battleEngage(){
 	bool finished = false;
 	bool youDie = false;
+	int enemyHpNow = enemyStatus->getEnemyHpMax();
 	char command;
 	openAnimation();
-	battleAnimation(heroStatus, enemyStatus);
 	while(finished != true){
+		battleAnimationWait(heroStatus, enemyStatus, enemyHpNow);
 		cin >> command;
+		//escape
 		if(command == 'e') break;
+		//attack
+		else if(command == 'a'){
+			battleAnimationHit(heroStatus,enemyStatus,enemyHpNow);
+			enemyHpNow = damageCalcu(heroStatus, enemyStatus, enemyHpNow);
+			//hero die
+			if (heroStatus->getHeroHpNow() <= 0){
+				finished = true;
+				youDie = true;
+			}
+			//kill the enemy
+			else if (enemyHpNow <= 0) finished = true;
+		}
 	}
                     
 

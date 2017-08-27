@@ -1,5 +1,5 @@
-#Reminder
-###Upload and DownLoad
+# Reminder
+### Upload and DownLoad
 Before push and pull 
 
 Clone first
@@ -39,4 +39,4 @@ Map
 
 add status bar
 
-generate enemy and battle animation
+generate enemy and battle animation battle algorithm
