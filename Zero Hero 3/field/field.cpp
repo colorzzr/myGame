@@ -114,7 +114,20 @@ bool Field::battleEngage(){
 	return youDie;
 }
 
-
+/************************************
+ * main list structure				*
+ * and it can load into sublist:	*
+ * - item (bag)						*
+ * - skill set (skill)				*
+ * - hero status (status)			*
+ * - save game (save)				*
+ *	**************************		*
+ *	* HP: 20/20 * (i)Items   *		*
+ *	* Coin: 0   * (k)Skill   *		*
+ *	* Level: 1  * (s)Status  *		*
+ *	* EXP: 0/20 * (o)Save    *		*
+ *	**************************		*
+ ************************************/
 void Field::openMainList(){
 	while(true){
 		cout << "**************************" << endl;

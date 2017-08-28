@@ -12,6 +12,7 @@ public:
 	void printBagItem();
 	int getCoin();
 	void changeCoin(int val);
+	void ItemUse(char name);
 };
 
 #endif
