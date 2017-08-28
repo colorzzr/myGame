@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <stdio.h>
 
 #include "field.h"
 
@@ -70,10 +71,13 @@ void Field::printStatusBar(){
 }
 
 void Field::getHeroLoc(){
+	int number;
 	do{
 		cout << "please enter the location X and Y" << endl;
-		cin >> heroLocX >> heroLocY;
-	}while(heroLocX < 0 && heroLocY < 0);
+		number = scanf("%d%d", &heroLocX, &heroLocY);
+		//clear the buffer
+		setbuf(stdin, NULL);
+	}while(number != 2);
 	heroLocX = heroLocX % 10;
 	heroLocY = heroLocY % 10;
 	map[heroLocX][heroLocY] = '0';
@@ -111,11 +115,41 @@ bool Field::battleEngage(){
 
 
 
+void Field::openMainList(){
+	cout << "************************" << endl;
+    cout << "* HP:" << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << "  * (i)Items  *" << endl;
+    cout << "* Coin: " << heroStatus->getCoin() << "  * (k)Skill  *" << endl;
+    cout << "* Level:" << heroStatus->getLevel() << "  * (s)Status *" << endl;
+    cout << "* EXP:"<< heroStatus->getEXP() << "/" << heroStatus->getLevelUpEXP() << " * (o)Save   *" << endl;
+    cout << "************************" << endl;
+    
+    char command;
+	cin >> command;
+	if(command == 'i'){
+
+	}
+	else if(command == 'k'){
+
+	}
+	else if (command == 's'){
+		heroStatus->printStatus();
+	}
+	else if (command == 'o'){
+
+	}
+}
+
+
+
 bool Field::controlPanel(){
     char command;
     int youDie = false;
+    do{
     cin >> command;
+    }while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'&& command != 'i'&& command != 'H');
     system("clear");
+
+    //for moving
     if(command == 'w') {
     	if(heroLocX > 0){
     		//engage battle
@@ -149,8 +183,14 @@ bool Field::controlPanel(){
     		map[heroLocX][heroLocY] = '0';
     	}
     }
+    //open the package
+    else if(command == 'i'){
+    	openMainList();
+    }
+    //open hint
     else if(command == 'H'){
     	printHint();
     }
+
     return youDie;
 }

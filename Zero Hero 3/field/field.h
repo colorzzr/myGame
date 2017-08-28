@@ -23,7 +23,7 @@ public:
 	bool controlPanel();
 	void printStatusBar();
 	void printHint();
-	//friend funtion to access the member
+	void openMainList();
 	bool battleEngage();
 };
 //get a prototype for main using sleep

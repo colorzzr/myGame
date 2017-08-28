@@ -25,6 +25,18 @@ HeroStatus::~HeroStatus(){
 	
 }
 
+void HeroStatus::printStatus(){
+	cout << "************************"  << endl;
+    cout << "* STR:"<< STR <<"  * PhyDF:"<< physicalDefense << "    *" << endl;
+    cout << "* INT:"<< INTE <<"  * MagDF:"<< magicDefense << "    *" << endl;
+    cout << "* LUC:"<< LUC <<"  *  SKP:" << skillPoint << "    *" << endl;
+    cout << "* AGI:"<< AGI <<"  *             *"  << endl;
+    cout << "************************" << endl;
+    cout << "Press any key to return" << endl;
+    char temp;
+    cin >> temp;
+}
+
 int HeroStatus::getHeroHpNow(){
 	return heroHPNow;
 }
@@ -49,6 +61,29 @@ void HeroStatus::changeCoin(int val){
 	coin = val;
 }
 
+int HeroStatus::getLevel(){
+	return level;
+}
+
+void HeroStatus::changeLevel(int val){
+	level = val;
+}
+
+int HeroStatus::getEXP(){
+	return EXP;
+}
+
+void HeroStatus::increaseEXP(int val){
+	EXP = EXP + val;
+}
+
+int HeroStatus::getLevelUpEXP(){
+	return levelUpEXP;
+}
+
+void HeroStatus::increaseLevelUpEXP(int val){
+	levelUpEXP = levelUpEXP + val;
+}
 
 
 
