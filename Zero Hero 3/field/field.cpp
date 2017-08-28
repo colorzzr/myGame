@@ -142,7 +142,7 @@ void Field::openMainList(){
 		cin >> command;
 		if(command == 'q') break;
 		else if(command == 'i'){
-			bag->printBagItem();
+			bag->printBagItem(heroStatus);
 		}
 		else if(command == 'k'){
 

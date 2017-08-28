@@ -42,3 +42,5 @@ add status bar
 generate enemy and battle animation battle algorithm
 
 add mainlist and new folder `bagInfo` to contain the bag item
+
+finish basic bag structure
