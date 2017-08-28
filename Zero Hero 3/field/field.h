@@ -3,6 +3,7 @@
 
 #include "../status/heroStatus.h"
 #include "../status/enemyStatus.h"
+#include "../bag/bagInfo.h"
 
 class Field{
 private:
@@ -14,6 +15,7 @@ private:
 	int step;
 	HeroStatus* heroStatus;
 	EnemyStatus* enemyStatus;
+	Bag* bag;
 public:
 	Field();
 	~Field();

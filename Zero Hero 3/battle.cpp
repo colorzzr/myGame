@@ -16,7 +16,7 @@ void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int e
 	cout << "***************************************" << endl;
 	cout << "* HP: " << heroStatus->heroHPNow << " / " << heroStatus->heroHPMax << " * (a)Attack | (i)Items  *" << endl;
 	//change coin to another status later
-    cout << "* Coin: " << heroStatus->coin << "     * (s)Skills | (e)Escape *" << endl;
+    cout << "* Coin: change!   * (s)Skills | (e)Escape *" << endl;
     cout << "***************************************" << endl;
 }
 
@@ -29,7 +29,7 @@ void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int en
     cout << "***************************************" << endl;
     cout << "* HP: " << heroStatus->heroHPNow << " / " << heroStatus->heroHPMax << " * (a)Attack | (i)Items  *" << endl;
     //change coin to another status later
-    cout << "* Coin: " << heroStatus->coin << "     * (s)Skills | (e)Escape *" << endl;
+    cout << "* Coin: change!    * (s)Skills | (e)Escape *" << endl;
     cout << "***************************************" << endl;
     sleep(1);
     system("clear");

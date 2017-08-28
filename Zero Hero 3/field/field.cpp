@@ -15,9 +15,10 @@ Field::Field(){
 			map[i][j] = '-';
 		}
 	}
-	//initial for the hero status
+	//initial for all
 	heroStatus = new HeroStatus;
 	enemyStatus = new EnemyStatus;
+	bag = new Bag;
 	step = 0;
 }
 
@@ -59,14 +60,14 @@ void Field::printField(){
 }
 
 void Field::printHint(){
-	cout << "**********************" << endl;
-	cout << "* Hit i for item bar *" << endl;
-	cout << "**********************" << endl;
+	cout << "***********************" << endl;
+	cout << "* Hit i for main list *" << endl;
+	cout << "***********************" << endl;
 }
 
 void Field::printStatusBar(){
 	cout << "Hp:" << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << endl;
-	cout << "Coin:" << heroStatus->getCoin() << endl;
+	cout << "Coin:" << bag->getCoin() << endl;
 	cout << "Hint H(capital!!!) for hint" << endl;
 }
 
@@ -114,28 +115,32 @@ bool Field::battleEngage(){
 }
 
 
-
 void Field::openMainList(){
-	cout << "************************" << endl;
-    cout << "* HP:" << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << "  * (i)Items  *" << endl;
-    cout << "* Coin: " << heroStatus->getCoin() << "  * (k)Skill  *" << endl;
-    cout << "* Level:" << heroStatus->getLevel() << "  * (s)Status *" << endl;
-    cout << "* EXP:"<< heroStatus->getEXP() << "/" << heroStatus->getLevelUpEXP() << " * (o)Save   *" << endl;
-    cout << "************************" << endl;
+	while(true){
+		cout << "**************************" << endl;
+    	cout << "* HP: " << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << "  * (i)Items   *" << endl;
+    	cout << "* Coin: " << bag->getCoin() << "   * (k)Skill   *" << endl;
+    	cout << "* Level: " << heroStatus->getLevel() << "  * (s)Status  *" << endl;
+    	cout << "* EXP: "<< heroStatus->getEXP() << "/" << heroStatus->getLevelUpEXP() << " * (o)Save    *" << endl;
+    	cout << "**************************" << endl;
+    	cout << "Press 'q' to go back" << endl;
     
-    char command;
-	cin >> command;
-	if(command == 'i'){
+    	char command;
+		cin >> command;
+		if(command == 'q') break;
+		else if(command == 'i'){
+			bag->printBagItem();
+		}
+		else if(command == 'k'){
 
-	}
-	else if(command == 'k'){
+		}
+		else if (command == 's'){
+			heroStatus->printStatus();
+			system("clear");
+		}
+		else if (command == 'o'){
 
-	}
-	else if (command == 's'){
-		heroStatus->printStatus();
-	}
-	else if (command == 'o'){
-
+		}
 	}
 }
 

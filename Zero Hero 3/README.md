@@ -32,7 +32,7 @@ Unable to workout reading without `enter` in c++
 
 
 # Version:
-### Alpha 1.1
+### Alpha 1.5
 Basic movement
 
 Map
@@ -40,3 +40,5 @@ Map
 add status bar
 
 generate enemy and battle animation battle algorithm
+
+add mainlist and new folder `bagInfo` to contain the bag item

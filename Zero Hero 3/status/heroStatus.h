@@ -10,7 +10,6 @@ private:
 	int heroHPMax;
 	int heroHPNow;
 	int EXP;
-	int coin;
 	int levelUpEXP;
 	int level;
 	int STR; 
@@ -28,8 +27,6 @@ public:
 	void changeHeroHpNow(int val);
 	int getHeroHpMax();
 	void changeHeroHpMax(int val);
-	int getCoin();
-	void changeCoin(int val);
 	int getLevel();
 	void changeLevel(int val);
 	int getEXP();
