@@ -17,7 +17,6 @@ public:
 	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus,int enemyHpNow);
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
-
 };
 
 

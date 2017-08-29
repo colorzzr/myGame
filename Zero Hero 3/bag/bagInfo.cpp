@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cstdlib>
 #include "bagInfo.h"
+
 
 using namespace std;
 class HeroStatus;
@@ -90,5 +92,5 @@ int Bag::getCoin(){
 }
 
 void Bag::changeCoin(int val){
-	coin = val;
+	coin = coin + val;
 }

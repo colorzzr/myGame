@@ -16,6 +16,7 @@ public:
 	int getCoin();
 	void changeCoin(int val);
 	void ItemUse(char name, HeroStatus* heroStatus);
+	friend void battleReward(HeroStatus* heroStatus, Bag* bag);
 };
 
 #endif

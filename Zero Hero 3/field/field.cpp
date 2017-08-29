@@ -86,12 +86,11 @@ void Field::getHeroLoc(){
 
 //note here more battle animation is inside the battle.cpp
 bool Field::battleEngage(){
-	bool finished = false;
 	bool youDie = false;
 	int enemyHpNow = enemyStatus->getEnemyHpMax();
 	char command;
 	openAnimation();
-	while(finished != true){
+	while(1){
 		battleAnimationWait(heroStatus, enemyStatus, enemyHpNow);
 		cin >> command;
 		//escape
@@ -100,13 +99,15 @@ bool Field::battleEngage(){
 		else if(command == 'a'){
 			battleAnimationHit(heroStatus,enemyStatus,enemyHpNow);
 			enemyHpNow = damageCalcu(heroStatus, enemyStatus, enemyHpNow);
+			if (enemyHpNow <= 0) {
+				battleReward(heroStatus, bag);
+				break;
+			}
 			//hero die
 			if (heroStatus->getHeroHpNow() <= 0){
-				finished = true;
 				youDie = true;
+				break;
 			}
-			//kill the enemy
-			else if (enemyHpNow <= 0) finished = true;
 		}
 	}
                     
@@ -142,6 +143,8 @@ void Field::openMainList(){
 		cin >> command;
 		if(command == 'q') break;
 		else if(command == 'i'){
+			//because of fear, we want to be stronger
+			//because of fear, we know our bottom line
 			bag->printBagItem(heroStatus);
 		}
 		else if(command == 'k'){

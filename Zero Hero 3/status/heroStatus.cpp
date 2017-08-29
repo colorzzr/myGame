@@ -7,7 +7,7 @@ using namespace std;
 
 HeroStatus::HeroStatus(){
 	heroHPMax = 20;
-	heroHPNow = 6;
+	heroHPNow = 20;
 	EXP = 0;
 	levelUpEXP = 20;
 	level = 1;
@@ -34,6 +34,16 @@ void HeroStatus::printStatus(){
     cout << "Press any key to return" << endl;
     char temp;
     cin >> temp;
+}
+
+void HeroStatus::levelUp(){
+	level++;
+	EXP = EXP - levelUpEXP;
+	levelUpEXP = levelUpEXP + level * level / 2;
+	skillPoint = skillPoint + 2;
+	heroHPMax = heroHPMax + 3;
+	heroHPNow = heroHPMax;
+
 }
 
 int HeroStatus::getHeroHpNow(){

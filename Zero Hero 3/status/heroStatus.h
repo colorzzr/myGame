@@ -5,6 +5,7 @@
 
 //for enemyStatus is an argument of function. it need prototype
 class EnemyStatus;
+class Bag;
 class HeroStatus{
 private:
 	int heroHPMax;
@@ -33,9 +34,12 @@ public:
 	void increaseEXP(int val);
 	int getLevelUpEXP();
 	void increaseLevelUpEXP(int val);
+	void levelUp();
 	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
+	friend void battleReward(HeroStatus* heroStatus, Bag* bag);
+	
 };
 
 void openAnimation();
