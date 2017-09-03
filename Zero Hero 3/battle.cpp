@@ -67,9 +67,15 @@ int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow
     return enemyHpNow;
 }
 
-void battleReward(HeroStatus* heroStatus, Bag* bag){
+void battleReward(HeroStatus* heroStatus, Bag* bag, int step){
     srand(heroStatus->getHeroHpNow() + heroStatus->getEXP());
     heroStatus->increaseEXP(rand() % 4 + 2);
     srand(heroStatus->getHeroHpNow() + heroStatus->getEXP());
     bag->changeCoin(rand() % 4 + 1); 
+    //for item drop
+    srand(bag->getCoin() * step);
+    if(rand() % 5 == 2) bag->changeHealBottle();
+    srand(step * (bag->getCoin() + 2));
+    if(rand() % 9 == 3) bag->changeBeanSoup();
+
 }

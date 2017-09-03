@@ -35,10 +35,12 @@ public:
 	int getLevelUpEXP();
 	void increaseLevelUpEXP(int val);
 	void levelUp();
+	void addingStatusPoint();
 	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
-	friend void battleReward(HeroStatus* heroStatus, Bag* bag);
+	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
+	friend ostream& operator <<(ostream& saved, const HeroStatus& heroStatus);
 	
 };
 

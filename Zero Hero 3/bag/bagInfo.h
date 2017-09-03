@@ -16,7 +16,10 @@ public:
 	int getCoin();
 	void changeCoin(int val);
 	void ItemUse(char name, HeroStatus* heroStatus);
-	friend void battleReward(HeroStatus* heroStatus, Bag* bag);
+	void changeHealBottle();
+	void changeBeanSoup();
+	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
+	friend ostream& operator <<(ostream& saved, const Bag& bag);
 };
 
 #endif

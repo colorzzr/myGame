@@ -1,9 +1,14 @@
 #ifndef FEILD_H
 #define FEILD_H
 
+#include <fstream>
+#include <iostream>
+
 #include "../status/heroStatus.h"
 #include "../status/enemyStatus.h"
 #include "../bag/bagInfo.h"
+
+using namespace std;
 
 class Field{
 private:
@@ -27,6 +32,7 @@ public:
 	void printHint();
 	void openMainList();
 	bool battleEngage();
+	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 };
 //get a prototype for main using sleep
 void sleep(int s);

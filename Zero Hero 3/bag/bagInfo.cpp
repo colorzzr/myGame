@@ -94,3 +94,18 @@ int Bag::getCoin(){
 void Bag::changeCoin(int val){
 	coin = coin + val;
 }
+
+void Bag::changeHealBottle(){
+	healBottle++;
+}
+
+void Bag::changeBeanSoup(){
+	beanSoup++;
+}
+
+ostream& operator <<(ostream& saved, const Bag& bag){
+	saved << "Bag:" << endl;
+	saved << bag.coin << endl;
+	saved << bag.healBottle << endl;
+	saved << bag.beanSoup << endl;
+}

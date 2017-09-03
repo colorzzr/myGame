@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
+#include <fstream>
 
 #include "field.h"
 
 
 using namespace std;
-
 
 
 Field::Field(){
@@ -100,7 +100,8 @@ bool Field::battleEngage(){
 			battleAnimationHit(heroStatus,enemyStatus,enemyHpNow);
 			enemyHpNow = damageCalcu(heroStatus, enemyStatus, enemyHpNow);
 			if (enemyHpNow <= 0) {
-				battleReward(heroStatus, bag);
+				battleReward(heroStatus, bag, step);
+				cout << "You win !" << endl;
 				break;
 			}
 			//hero die
@@ -110,10 +111,16 @@ bool Field::battleEngage(){
 			}
 		}
 	}
-                    
-
+         
+    //hero level up           
+	if(heroStatus->getEXP() >= heroStatus->getLevelUpEXP()){
+		cout << "Level Up !!!" << endl;
+		 heroStatus->levelUp();
+	}
+	sleep(1);
 	return youDie;
 }
+
 
 /************************************
  * main list structure				*
@@ -154,8 +161,25 @@ void Field::openMainList(){
 			heroStatus->printStatus();
 			system("clear");
 		}
+		//for ouput the variable
 		else if (command == 'o'){
-
+			ofstream saved;
+			saved.open("saved");
+			//save field info
+			saved << "Field" << endl;
+			for(int i = 0; i < 10; i++){
+				for (int j = 0; j < 10; j++){
+					if(map[i][j] == '1') saved << "row:"<< i << "col:" << j << endl;
+				}
+			}
+			saved << heroLocX << " " << heroLocY << endl;
+			//save heroStatus and bag info
+			saved << (*heroStatus);
+			saved << (*bag);
+			system("clear");
+			cout << "saved!!" << endl;
+			sleep(1);
+			system("clear");
 		}
 	}
 }

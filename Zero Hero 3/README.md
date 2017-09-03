@@ -30,9 +30,15 @@ all have to do is to give prototype at begining of each file
 Unable to workout reading without `enter` in c++
 
 
+# TO DO
+ - change the battle algorithm(srand())
+ - change the coin bar in  battle engage
+ - change the phy and mag defence calculation
+
+
 
 # Version:
-### Alpha 1.5
+### Alpha 1.6
 Basic movement
 
 Map
@@ -46,3 +52,5 @@ add mainlist and new folder `bagInfo` to contain the bag item
 finish basic bag structure
 
 add battle reward
+
+add save option

@@ -1,6 +1,8 @@
 #ifndef ENEMYSTATUS_H
 #define ENEMYSTATUS_H
 
+using namespace std;
+
 #include "heroStatus.h"
 //for HeroStatus is an argument of function. it need prototype
 class HeroStatus;
