@@ -26,6 +26,14 @@ because two `class` do not define varible they just take para for function
 
 all have to do is to give prototype at begining of each file 
 
+### save load
+
+friend ostream& operator <<(ostream& output, const class& );
+
+friend istream& operator >>(istream& input, class& );
+
+
+
 # Failure list
 Unable to workout reading without `enter` in c++
 
@@ -34,11 +42,12 @@ Unable to workout reading without `enter` in c++
  - change the battle algorithm(srand())
  - change the coin bar in  battle engage
  - change the phy and mag defence calculation
-
+ - add more guan ka
+ - add story
 
 
 # Version:
-### Alpha 1.6
+### Alpha 1.7
 Basic movement
 
 Map
@@ -53,4 +62,4 @@ finish basic bag structure
 
 add battle reward
 
-add save option
+add save option and load

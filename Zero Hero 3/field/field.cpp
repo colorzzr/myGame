@@ -166,12 +166,12 @@ void Field::openMainList(){
 			ofstream saved;
 			saved.open("saved");
 			//save field info
-			saved << "Field" << endl;
 			for(int i = 0; i < 10; i++){
 				for (int j = 0; j < 10; j++){
-					if(map[i][j] == '1') saved << "row:"<< i << "col:" << j << endl;
+					if(map[i][j] == '1') saved << i << " " << j << endl;
 				}
 			}
+			saved << 10 << " " << 10 << endl;
 			saved << heroLocX << " " << heroLocY << endl;
 			//save heroStatus and bag info
 			saved << (*heroStatus);
@@ -238,4 +238,26 @@ bool Field::controlPanel(){
     }
 
     return youDie;
+}
+
+
+bool Field::loadSaved(){
+	ifstream load;
+	int col, row;
+	load.open("saved");
+	if(load.is_open() == false) return false;
+	else{
+		//load map
+		do{
+			load >> row >> col;
+			map[row][col] = '1';
+		}while(row != 10);
+		load >> heroLocX >> heroLocY;
+		map[heroLocX][heroLocY] = '0';
+		//load the heroStatus and it is a pointer
+		load >> (*heroStatus);
+		load >> (*bag);
+		return true;
+	}
+
 }

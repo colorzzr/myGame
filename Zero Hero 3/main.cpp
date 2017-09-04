@@ -8,8 +8,26 @@
 
 using namespace std;
 
+//user to choose the New game or Load game
+void gameOption(Field* map){
+	cout << "    - New game    " << endl;
+	cout << "    - Continue    " << endl;
+	char command = 'a';
+	cin >> command;
+	//load game
+	if(command == 'C' || command == 'c'){
+		 if(map->loadSaved() == false) {
+		 	cout << "You dont have saved slot! " << endl;
+		 	map->getHeroLoc();
+		 }
+	}
+	//starting game
+	else if (command == 'N' || command == 'n') map->getHeroLoc();
+    system("clear");
+}
 
-int main(int argc, char** argv){
+//greeting of game
+void greeting(){
 	system("clear");
 	//print the greeting
 	cout << "----------Zero Hero 3----------\n" << endl;
@@ -19,20 +37,9 @@ int main(int argc, char** argv){
 			break;
 		}
 	}
+}
 
-	Field* map = new Field;
-	bool finished = false;
-
-	//starting game
-	map->getHeroLoc();
-    system("clear");
-	while(finished != true){
-		map->printField();
-		map->printStatusBar();
-		finished = map->controlPanel();
-		system("clear");
-	}
-
+void youDie(){
 	system("clear");
 	cout << "...\n" << endl;
 	sleep(1);
@@ -43,8 +50,22 @@ int main(int argc, char** argv){
 	cout << "HAHAHAHAH......\n" << endl;
 	sleep(1);
 	cout << "That is the end. I think...." << endl;
-   	
-   	
+}
 
+int main(int argc, char** argv){
+	greeting();
+
+	Field* map = new Field;
+	bool finished = false;
+
+	gameOption(map);
+	while(finished != true){
+		map->printField();
+		map->printStatusBar();
+		finished = map->controlPanel();
+		system("clear");
+	}   	
+
+	youDie();
 	return 0;
 }

@@ -121,7 +121,6 @@ void HeroStatus::increaseLevelUpEXP(int val){
 
 //overloading the << operator for saved option
 ostream& operator <<(ostream& saved, const HeroStatus& heroStatus){
-	saved << "heroStatus:" << endl;
 	saved << heroStatus.heroHPMax << endl;
 	saved << heroStatus.heroHPNow << endl;
 	saved << heroStatus.EXP << endl;
@@ -136,4 +135,18 @@ ostream& operator <<(ostream& saved, const HeroStatus& heroStatus){
 	saved << heroStatus.magicDefense << endl;
 }
 
-
+istream& operator >>(istream& load, HeroStatus& heroStatus){
+	load >> (heroStatus.heroHPMax);
+	load >> (heroStatus.heroHPNow);
+	load >> (heroStatus.EXP);
+	load >> (heroStatus.levelUpEXP);
+	load >> (heroStatus.level);
+	load >> (heroStatus.STR); 
+	load >> (heroStatus.INTE);
+	load >> (heroStatus.LUC);
+	load >> (heroStatus.AGI);
+	load >> (heroStatus.skillPoint);
+	load >> (heroStatus.physicalDefense);
+	load >> (heroStatus.magicDefense);
+	return load;
+}

@@ -41,7 +41,8 @@ public:
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 	friend ostream& operator <<(ostream& saved, const HeroStatus& heroStatus);
-	
+	//remember here input operator dont need const
+	friend istream& operator >>(istream& load, HeroStatus& heroStatus);
 };
 
 void openAnimation();

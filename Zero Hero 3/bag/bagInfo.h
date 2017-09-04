@@ -20,6 +20,8 @@ public:
 	void changeBeanSoup();
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 	friend ostream& operator <<(ostream& saved, const Bag& bag);
+	//remember here input operator dont need const
+	friend istream& operator >>(istream& load, Bag& bag);
 };
 
 #endif

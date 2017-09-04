@@ -104,8 +104,13 @@ void Bag::changeBeanSoup(){
 }
 
 ostream& operator <<(ostream& saved, const Bag& bag){
-	saved << "Bag:" << endl;
 	saved << bag.coin << endl;
 	saved << bag.healBottle << endl;
 	saved << bag.beanSoup << endl;
+}
+
+istream& operator >>(istream& load, Bag& bag){
+	load >> bag.coin;
+    load >> bag.healBottle;
+    load >> bag.beanSoup;
 }

@@ -32,6 +32,7 @@ public:
 	void printHint();
 	void openMainList();
 	bool battleEngage();
+	bool loadSaved();
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 };
 //get a prototype for main using sleep
