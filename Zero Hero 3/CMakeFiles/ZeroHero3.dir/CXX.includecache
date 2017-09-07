@@ -1,0 +1,108 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/color/myGame/Zero Hero 3/./bag/bagInfo.h
+../status/heroStatus.h
+/home/color/myGame/Zero Hero 3/./status/heroStatus.h
+
+/home/color/myGame/Zero Hero 3/./extraFunction.h
+
+/home/color/myGame/Zero Hero 3/./status/enemyStatus.h
+heroStatus.h
+/home/color/myGame/Zero Hero 3/./status/heroStatus.h
+
+/home/color/myGame/Zero Hero 3/./status/heroStatus.h
+enemyStatus.h
+/home/color/myGame/Zero Hero 3/./status/enemyStatus.h
+
+/home/color/myGame/Zero Hero 3/bag/bagInfo.cpp
+iostream
+-
+cstdlib
+-
+bagInfo.h
+/home/color/myGame/Zero Hero 3/bag/bagInfo.h
+
+/home/color/myGame/Zero Hero 3/bag/bagInfo.h
+../status/heroStatus.h
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
+
+/home/color/myGame/Zero Hero 3/battle.cpp
+iostream
+-
+cstdlib
+-
+./status/heroStatus.h
+/home/color/myGame/Zero Hero 3/./status/heroStatus.h
+./status/enemyStatus.h
+/home/color/myGame/Zero Hero 3/./status/enemyStatus.h
+./bag/bagInfo.h
+/home/color/myGame/Zero Hero 3/./bag/bagInfo.h
+./extraFunction.h
+/home/color/myGame/Zero Hero 3/./extraFunction.h
+
+/home/color/myGame/Zero Hero 3/field/field.cpp
+iostream
+-
+cstdlib
+-
+stdio.h
+-
+fstream
+-
+field.h
+/home/color/myGame/Zero Hero 3/field/field.h
+
+/home/color/myGame/Zero Hero 3/field/field.h
+fstream
+-
+iostream
+-
+../status/heroStatus.h
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
+../status/enemyStatus.h
+/home/color/myGame/Zero Hero 3/status/enemyStatus.h
+../bag/bagInfo.h
+/home/color/myGame/Zero Hero 3/bag/bagInfo.h
+
+/home/color/myGame/Zero Hero 3/main.cpp
+cstdlib
+-
+iostream
+-
+cstring
+-
+cmath
+-
+field/field.h
+/home/color/myGame/Zero Hero 3/field/field.h
+
+/home/color/myGame/Zero Hero 3/status/enemyStatus.cpp
+iostream
+-
+cstdlib
+-
+enemyStatus.h
+/home/color/myGame/Zero Hero 3/status/enemyStatus.h
+
+/home/color/myGame/Zero Hero 3/status/enemyStatus.h
+heroStatus.h
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
+
+/home/color/myGame/Zero Hero 3/status/heroStatus.cpp
+iostream
+-
+cstdlib
+-
+heroStatus.h
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
+
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
+enemyStatus.h
+/home/color/myGame/Zero Hero 3/status/enemyStatus.h
+

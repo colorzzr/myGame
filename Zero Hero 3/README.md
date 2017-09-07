@@ -47,7 +47,7 @@ Unable to workout reading without `enter` in c++
 
 
 # Version:
-### Alpha 1.7
+### Alpha 1.8
 Basic movement
 
 Map
@@ -63,3 +63,5 @@ finish basic bag structure
 add battle reward
 
 add save option and load
+
+change gcc compiler to CMake
