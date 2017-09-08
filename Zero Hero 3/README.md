@@ -44,6 +44,7 @@ Unable to workout reading without `enter` in c++
  - change the phy and mag defence calculation
  - add more guan ka
  - add story
+ - fix up
 
 
 # Version:
@@ -65,3 +66,9 @@ add battle reward
 add save option and load
 
 change gcc compiler to CMake
+
+---
+
+### Beta 1.0
+
+add tutourial
