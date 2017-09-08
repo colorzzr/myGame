@@ -1,12 +1,14 @@
 #include <cstdlib>
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <cmath>
 
 
 #include "field/field.h"
 
 using namespace std;
+
+void tutouial (Field* map);
 
 //user to choose the New game or Load game
 void gameOption(Field* map){
@@ -19,10 +21,14 @@ void gameOption(Field* map){
 		 if(map->loadSaved() == false) {
 		 	cout << "You dont have saved slot! " << endl;
 		 	map->getHeroLoc();
+		 	tutouial(map);
 		 }
 	}
 	//starting game
-	else if (command == 'N' || command == 'n') map->getHeroLoc();
+	else if (command == 'N' || command == 'n') {
+		map->getHeroLoc();
+		tutouial(map);
+	}
     system("clear");
 }
 
@@ -52,6 +58,7 @@ void youDie(){
 	cout << "That is the end. I think...." << endl;
 }
 
+//ask user to move up down left right once
 void movingTraining (char target, Field* map){
 	char command;
 	while (command != target) {
@@ -63,13 +70,29 @@ void movingTraining (char target, Field* map){
 	}
 }
 
+//fucntion for user to engane the battle
 void battleTraining (Field* map, int heroLocX, int heroLocY){
-	while (map->getMapChar(heroLocX, heroLocY) != 0){
+	while (map->getMapChar (heroLocX, heroLocY + 1) != '0'){
 		map->printField();
 		cout << "Well done! now let us engage in battle" << endl;
 		cout << "Moving to enemy(1)" << endl;
 		map->controlPanel();
 		map->changeStep(0);
+	}
+}
+
+//guide user into bag and use healBottle
+void itemUseTrain(Field* map){
+	char command;
+	int bottleInBag = map->getHealBottle();
+	while (map->getHealBottle() != (bottleInBag - 1)){
+		map->printField();
+		cout << "Ok now, you are hurted after battle" << endl;
+		cout << "Press 'i' go to main list then press 'i' go to item bag" << endl;
+		cout << "Press 'h' for checking infomation of healBottle and Use it!" << endl; 
+		map->controlPanel();
+		map->changeStep(0);
+
 	}
 }
 
@@ -83,7 +106,7 @@ void tutouial (Field* map){
 	//ask user to choose skip
 	cout << "Do you want skip tutouial?" << endl;
 	while(command != 'y' && command != 'n'){
-	cin >> command;
+		cin >> command;
 	}	
 	//skip tut
 	if(command == 'y') return;
@@ -103,15 +126,18 @@ void tutouial (Field* map){
 	map->addEnemy(heroLocX, heroLocY + 1);
 	system("clear");
 	battleTraining(map, heroLocX, heroLocY);
+	itemUseTrain(map);
+	cout << "Congratulations! Now you can explore the world." << endl;
 	cin >> command;
 }
 
-int main(int argc, char** argv){
+
+
+int main (int argc, char** argv){
 	greeting();
 	Field* map = new Field;
 	bool finished = false;
 	gameOption(map);
-	tutouial(map);
 	while(finished != true){
 		map->printField();
 		map->printStatusBar();

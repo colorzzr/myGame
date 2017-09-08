@@ -241,7 +241,7 @@ bool Field::controlPanel(){
     return youDie;
 }
 
-//overload for tut
+//below is overload for tut
 char Field::controlPanel(char input){
     char command = input;
     int youDie = false;
@@ -340,4 +340,9 @@ void Field::addEnemy(int row, int col){
 //check the map
 char Field::getMapChar(int row, int col){
 	return map[row][col];
+}
+
+//check the healBottle inside bag
+int Field::getHealBottle(){
+	return bag->getHealBottle();
 }

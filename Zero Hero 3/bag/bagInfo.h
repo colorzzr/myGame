@@ -18,6 +18,7 @@ public:
 	void ItemUse(char name, HeroStatus* heroStatus);
 	void changeHealBottle();
 	void changeBeanSoup();
+	int getHealBottle();
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 	friend ostream& operator <<(ostream& saved, const Bag& bag);
 	//remember here input operator dont need const

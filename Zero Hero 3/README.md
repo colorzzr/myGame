@@ -42,12 +42,12 @@ Unable to workout reading without `enter` in c++
  - change the coin bar in  battle engage
  - change the phy and mag defence calculation
  - add more guan ka
-<<<<<<< HEAD
  - add story
  - fix up
-=======
  - add story and tutourial
->>>>>>> e58a7eba7f20e839e86a81c647e04a3f3c9b17b5
+
+### INPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ - pass step into bag for control tutourial
 
 
 # Version:

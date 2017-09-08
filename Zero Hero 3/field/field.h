@@ -39,6 +39,7 @@ public:
 	char controlPanel(char input);
 	void addEnemy(int row, int col);
 	char getMapChar(int row, int col);
+	int getHealBottle();
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 };
 //get a prototype for main using sleep

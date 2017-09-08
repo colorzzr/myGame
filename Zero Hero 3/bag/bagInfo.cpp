@@ -103,6 +103,10 @@ void Bag::changeBeanSoup(){
 	beanSoup++;
 }
 
+int Bag::getHealBottle(){
+    return healBottle;
+}
+
 ostream& operator <<(ostream& saved, const Bag& bag){
 	saved << bag.coin << endl;
 	saved << bag.healBottle << endl;
