@@ -1,8 +1,7 @@
-# Reminder
-### Upload and DownLoad
-Before push and pull 
+# Download
 
 Clone first
+then pull
 
 ### GCC Command
 To compile the cpp by using gcc you need
@@ -43,7 +42,7 @@ Unable to workout reading without `enter` in c++
  - change the coin bar in  battle engage
  - change the phy and mag defence calculation
  - add more guan ka
- - add story
+ - add story and tutourial
 
 
 # Version:

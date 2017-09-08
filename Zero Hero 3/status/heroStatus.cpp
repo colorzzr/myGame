@@ -8,7 +8,7 @@ using namespace std;
 HeroStatus::HeroStatus(){
 	heroHPMax = 20;
 	heroHPNow = 20;
-	EXP = 19;
+	EXP = 0;
 	levelUpEXP = 20;
 	level = 1;
 	STR = 5; 

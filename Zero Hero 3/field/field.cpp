@@ -34,7 +34,7 @@ void Field::generateEnemy(){
 	int enemyY = rand() % 10;
 	srand(heroLocY * heroLocX * step);
 	//make probabilaty to 1/5
-	if(rand() % 2 == 1){
+	if(rand() % 2 == 1 && step > 5){
 		if(enemyX != heroLocX && enemyY != heroLocY){
 			map[enemyX][enemyY] = '1';
 		}
@@ -59,6 +59,7 @@ void Field::printField(){
 	step++;
 }
 
+//for user to check the hint or operation
 void Field::printHint(){
 	cout << "***********************" << endl;
 	cout << "* Hit i for main list *" << endl;
@@ -240,6 +241,62 @@ bool Field::controlPanel(){
     return youDie;
 }
 
+//overload for tut
+char Field::controlPanel(char input){
+    char command = input;
+    int youDie = false;
+    while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'&& command != 'i'&& command != 'H'){
+    	cin >> command;
+    };
+    
+    system("clear");
+
+    //for moving
+    if(command == 'w') {
+    	if(heroLocX > 0){
+    		//engage battle
+    		if(map[heroLocX - 1][heroLocY] == '1') youDie = battleEngage(); 
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocX--;
+    		map[heroLocX][heroLocY] = '0';   		
+    	}
+    }
+    else if(command == 's') {
+    	if(heroLocX < 9){
+    		if(map[heroLocX + 1][heroLocY] == '1') youDie = battleEngage(); 
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocX++;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    else if(command == 'a') {
+    	if(heroLocY > 0){
+    		if(map[heroLocX][heroLocY - 1] == '1') youDie = battleEngage(); 
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocY--;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    else if(command == 'd') {
+    	if(heroLocY < 9){
+    		if(map[heroLocX][heroLocY + 1] == '1') youDie = battleEngage(); 
+    		map[heroLocX][heroLocY] = '-';
+    		heroLocY++;
+    		map[heroLocX][heroLocY] = '0';
+    	}
+    }
+    //open the package
+    else if(command == 'i'){
+    	openMainList();
+    }
+    //open hint
+    else if(command == 'H'){
+    	printHint();
+    }
+
+    return command;
+}
+
 
 bool Field::loadSaved(){
 	ifstream load;
@@ -260,4 +317,27 @@ bool Field::loadSaved(){
 		return true;
 	}
 
+}
+
+int Field::getHeroLocX(){
+		return heroLocX;
+}
+
+int Field::getHeroLocY(){
+	return heroLocY;
+}
+
+//this function is just for tutourial to control steps
+void Field::changeStep(int input){
+	step = input;
+}
+
+//for edit the map
+void Field::addEnemy(int row, int col){
+	map[row][col] = '1';
+}
+
+//check the map
+char Field::getMapChar(int row, int col){
+	return map[row][col];
 }
