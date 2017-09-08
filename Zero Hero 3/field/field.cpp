@@ -18,7 +18,7 @@ Field::Field(){
 	//initial for all
 	heroStatus = new HeroStatus;
 	enemyStatus = new EnemyStatus;
-	bag = new Bag;
+	bag = new Bag(step);
 	step = 0;
 }
 
@@ -34,7 +34,7 @@ void Field::generateEnemy(){
 	int enemyY = rand() % 10;
 	srand(heroLocY * heroLocX * step);
 	//make probabilaty to 1/5
-	if(rand() % 2 == 1 && step > 5){
+	if(rand() % 2 == 1 && step > 3){
 		if(enemyX != heroLocX && enemyY != heroLocY){
 			map[enemyX][enemyY] = '1';
 		}

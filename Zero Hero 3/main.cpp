@@ -128,7 +128,9 @@ void tutouial (Field* map){
 	battleTraining(map, heroLocX, heroLocY);
 	itemUseTrain(map);
 	cout << "Congratulations! Now you can explore the world." << endl;
-	cin >> command;
+	sleep(1);
+	/*system("clear");
+*/
 }
 
 

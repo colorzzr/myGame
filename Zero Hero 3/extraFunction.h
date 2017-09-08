@@ -3,7 +3,7 @@
 
 void sleep(int s) 
 { 
-    for(int i = 0; i < s * 500000000; i++); 
+    for(int i = 0; i < s * 450000000; i++); 
 } 
 
 

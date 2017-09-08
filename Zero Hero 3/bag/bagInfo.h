@@ -9,8 +9,9 @@ private:
 	int coin;
 	int healBottle;
 	int beanSoup;
+	int step;
 public:
-	Bag();
+	Bag(int step_);
 	~Bag();
 	void printBagItem(HeroStatus* heroStatus);
 	int getCoin();

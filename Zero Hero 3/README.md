@@ -46,8 +46,6 @@ Unable to workout reading without `enter` in c++
  - fix up
  - add story and tutourial
 
-### INPORTANT!!!!!!!!!!!!!!!!!!!!!!!!!!!
- - pass step into bag for control tutourial
 
 
 # Version:

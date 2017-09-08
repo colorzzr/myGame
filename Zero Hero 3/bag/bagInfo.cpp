@@ -6,10 +6,13 @@
 using namespace std;
 class HeroStatus;
 
-Bag::Bag(){
+void sleep(int s);
+
+Bag::Bag(int step_){
 	coin = 0;
 	healBottle = 2;
 	beanSoup = 1;
+    step = step_;
 }
 
 Bag::~Bag(){
@@ -37,6 +40,7 @@ void Bag::ItemUse(char name, HeroStatus* heroStatus){
         				heroStatus->changeHeroHpNow(heroStatus->getHeroHpMax());
         			else heroStatus->changeHeroHpNow(heroStatus->getHeroHpNow() + 5);
         			cout << "HP 5+++++++++++++++++" << endl;
+                    sleep(1);
         		}
         		break;
         	}
@@ -59,6 +63,7 @@ void Bag::ItemUse(char name, HeroStatus* heroStatus){
         				heroStatus->changeHeroHpNow(heroStatus->getHeroHpMax());
         			else heroStatus->changeHeroHpNow(heroStatus->getHeroHpNow() + 12);
         			cout << "HP 12+++++++++++++++++" << endl;
+                    sleep(1);
         		}
         		break;
         	}
@@ -75,11 +80,12 @@ void Bag::ItemUse(char name, HeroStatus* heroStatus){
 void Bag::printBagItem(HeroStatus* heroStatus){
 	while(1){
 		cout << "**************************" << endl;
-		if(healBottle > 0) cout << "* Heal bottle x "<< healBottle <<"        *" << endl;
-		if (beanSoup > 0) cout << "* Bean soup x " << beanSoup << "          *" << endl;
+		if(healBottle > 0) cout << "* Heal bottle x "<< healBottle <<"  (h)    *" << endl;
+		if (beanSoup > 0) cout << "* Bean soup x " << beanSoup << "    (b)    *" << endl;
     	cout << "*                        *" << endl;
     	cout << "**************************" << endl;
     	cout << "Press 'q' to go back" << endl;
+        if(step < 5) cout << "Press icon inside () to check infomation." << endl;
     	char usedItemName = 'a';
     	cin >> usedItemName;
     	if (usedItemName == 'q') break;

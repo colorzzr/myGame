@@ -10,6 +10,18 @@
 ../status/heroStatus.h
 /home/color/myGame/Zero Hero 3/status/heroStatus.h
 
+/home/color/myGame/Zero Hero 3/field/field.cpp
+iostream
+-
+cstdlib
+-
+stdio.h
+-
+fstream
+-
+field.h
+/home/color/myGame/Zero Hero 3/field/field.h
+
 /home/color/myGame/Zero Hero 3/field/field.h
 fstream
 -
@@ -21,18 +33,6 @@ iostream
 /home/color/myGame/Zero Hero 3/status/enemyStatus.h
 ../bag/bagInfo.h
 /home/color/myGame/Zero Hero 3/bag/bagInfo.h
-
-/home/color/myGame/Zero Hero 3/main.cpp
-cstdlib
--
-iostream
--
-string
--
-cmath
--
-field/field.h
-/home/color/myGame/Zero Hero 3/field/field.h
 
 /home/color/myGame/Zero Hero 3/status/enemyStatus.h
 heroStatus.h
