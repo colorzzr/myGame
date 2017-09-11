@@ -25,11 +25,14 @@ public:
 	Field();
 	~Field();
 	void generateEnemy();
-	void printField();
 	void getHeroLoc();
 	bool controlPanel();
+	//for printing
+	void printField();
+	void printSkillSet();
 	void printStatusBar();
 	void printHint();
+	
 	void openMainList();
 	bool battleEngage();
 	bool loadSaved();

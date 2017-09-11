@@ -1,11 +1,22 @@
 #ifndef SKILL_H
 #define SKILL_H
 
-enum skill{
+
+enum Skill{
 	strongAttack,
 	recover
 };
 
-void skillInfo(skill skillName){
+//use linkList to store the skill
+struct SkillNode{
+	Skill skillName;
+	SkillNode* next;
+
+};
+
+#endif
+
+/*
+void SkillNode::skillInfo(){
 	if(skillName == strongAttack) cout << "hhhhh" << endl;
-}
+}*/

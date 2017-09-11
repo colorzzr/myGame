@@ -123,6 +123,9 @@ bool Field::battleEngage(){
 	return youDie;
 }
 
+void Field::printSkillSet(){
+	heroStatus->printSkill();
+}
 
 /************************************
  * main list structure				*
@@ -160,6 +163,7 @@ void Field::openMainList(){
 			bag->printBagItem(heroStatus);
 		}
 		else if(command == 'k'){
+			printSkillSet();
 
 		}
 		else if (command == 's'){

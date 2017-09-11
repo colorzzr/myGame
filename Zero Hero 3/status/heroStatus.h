@@ -2,6 +2,7 @@
 #define HEROSTATUS_H
 
 #include "enemyStatus.h"
+#include "../skill/skill.h"
 
 //for enemyStatus is an argument of function. it need prototype
 class EnemyStatus;
@@ -22,6 +23,7 @@ private:
 	int skillPoint;
 	int physicalDefense;
 	int magicDefense;
+	SkillNode* skillList;
 public:
 	HeroStatus();
 	~HeroStatus();
@@ -40,6 +42,9 @@ public:
 	int getLevel();
 	void changeLevel(int val);
 	void levelUp();
+	//for skill set
+	void printSkill();
+	void checkForLearningSkill();
 	//for exp
 	int getEXP();
 	void increaseEXP(int val);

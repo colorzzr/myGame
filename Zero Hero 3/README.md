@@ -31,6 +31,12 @@ friend ostream& operator <<(ostream& output, const class& );
 
 friend istream& operator >>(istream& input, class& );
 
+### for member function
+
+if you dont have member function instead of general function 
+
+you have to type the prototype on each file
+
 
 
 # Failure list

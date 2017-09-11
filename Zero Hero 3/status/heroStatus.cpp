@@ -20,6 +20,7 @@ HeroStatus::HeroStatus(){
 	skillPoint = 0;
 	physicalDefense = STR * 0.6 + LUC * 0.2 + AGI * 0.1;
 	magicDefense = STR * 0.2 + LUC * 0.6 + AGI * 0.15;
+	skillList = NULL;
 }
 
 HeroStatus::~HeroStatus(){
@@ -109,7 +110,28 @@ void HeroStatus::changeHeroMpMax(int val){
 	heroMPMax = val;
 }
 //-----------------------------------------Justice line-------------------------------------------------
+/***********************************
+ * below is related to skill set   *
+ ***********************************/
 
+void HeroStatus::checkForLearningSkill(){
+	if(level == 5){
+		SkillNode* temp = new SkillNode;
+		temp->skillName = strongAttack;
+		skillList->next = temp;
+	}
+}
+
+void HeroStatus::printSkill(){
+	SkillNode* headList = skillList;
+	cout << "skillList" << endl;
+	while(headList != NULL) {
+		cout << headList->skillName << endl;
+		headList = headList->next;
+	}
+}
+
+//-----------------------------------------Justice line-------------------------------------------------
 /***********************************
  * below is related to hero level  *
  ***********************************/
@@ -131,6 +153,7 @@ void HeroStatus::levelUp(){
 	while(skillPoint != 0){
 		addingStatusPoint();
 	}
+	checkForLearningSkill();
 }
 //------------------------------------------Justice line-------------------------------------------------
 
