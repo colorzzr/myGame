@@ -27,6 +27,7 @@ Field::~Field(){
 }
 
 
+//randomly generate enemy base step on map
 void Field::generateEnemy(){
 	srand(heroLocX * step);
 	int enemyX = rand() % 10;
@@ -132,6 +133,7 @@ bool Field::battleEngage(){
  * - save game (save)				*
  *	**************************		*
  *	* HP: 20/20 * (i)Items   *		*
+ *  * MP: 5/5   * (e)Equip   *      *
  *	* Coin: 0   * (k)Skill   *		*
  *	* Level: 1  * (s)Status  *		*
  *	* EXP: 0/20 * (o)Save    *		*

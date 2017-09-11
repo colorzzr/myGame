@@ -75,3 +75,5 @@ change gcc compiler to CMake
 add tutourial update guiden character
 
 add MP feature
+
+working on skill feature
