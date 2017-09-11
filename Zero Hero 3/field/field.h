@@ -37,7 +37,7 @@ public:
 	int getHeroLocY();
 	void changeStep(int input);
 	char controlPanel(char input);
-	void addEnemy(int row, int col);
+	void addThingsOnMap(int row, int col, char chara);
 	char getMapChar(int row, int col);
 	int getHealBottle();
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);

@@ -8,6 +8,8 @@ using namespace std;
 HeroStatus::HeroStatus(){
 	heroHPMax = 20;
 	heroHPNow = 20;
+	heroMPMax = 5;
+	heroMPNow = 5;
 	EXP = 0;
 	levelUpEXP = 20;
 	level = 1;
@@ -67,18 +69,9 @@ void HeroStatus::addingStatusPoint(){
 	magicDefense = STR * 0.2 + LUC * 0.6 + AGI * 0.15;
 }
 
-void HeroStatus::levelUp(){
-	level++;
-	EXP = EXP - levelUpEXP;
-	levelUpEXP = levelUpEXP + level * level / 2;
-	skillPoint = skillPoint + 2;
-	heroHPMax = heroHPMax + 3;
-	heroHPNow = heroHPMax;
-	while(skillPoint != 0){
-		addingStatusPoint();
-	}
-}
-
+/*******************************
+ * below is related to heroHP  *
+ *******************************/
 int HeroStatus::getHeroHpNow(){
 	return heroHPNow;
 }
@@ -94,7 +87,32 @@ int HeroStatus::getHeroHpMax(){
 void HeroStatus::changeHeroHpMax(int val){
 	heroHPMax = val;
 }
+//---------------------------------------Justice line-------------------------------------------------
 
+
+/*********************************
+ * below is related to heroMMMP  *
+ *********************************/
+int HeroStatus::getHeroMpNow(){
+	return heroMPNow;
+}
+
+void HeroStatus::changeHeroMpNow(int val){
+	heroMPNow = val;
+}
+
+int HeroStatus::getHeroMpMax(){
+	return heroMPMax;
+}
+
+void HeroStatus::changeHeroMpMax(int val){
+	heroMPMax = val;
+}
+//-----------------------------------------Justice line-------------------------------------------------
+
+/***********************************
+ * below is related to hero level  *
+ ***********************************/
 int HeroStatus::getLevel(){
 	return level;
 }
@@ -103,6 +121,22 @@ void HeroStatus::changeLevel(int val){
 	level = val;
 }
 
+void HeroStatus::levelUp(){
+	level++;
+	EXP = EXP - levelUpEXP;
+	levelUpEXP = levelUpEXP + level * level / 2;
+	skillPoint = skillPoint + 2;
+	heroHPMax = heroHPMax + 3;
+	heroHPNow = heroHPMax;
+	while(skillPoint != 0){
+		addingStatusPoint();
+	}
+}
+//------------------------------------------Justice line-------------------------------------------------
+
+/*********************************
+ * below is related to EXP       *
+ *********************************/
 int HeroStatus::getEXP(){
 	return EXP;
 }
@@ -118,6 +152,7 @@ int HeroStatus::getLevelUpEXP(){
 void HeroStatus::increaseLevelUpEXP(int val){
 	levelUpEXP = levelUpEXP + val;
 }
+//-------------------------------------------Justice line--------------------------------------------------
 
 //overloading the << operator for saved option
 ostream& operator <<(ostream& saved, const HeroStatus& heroStatus){
@@ -133,6 +168,8 @@ ostream& operator <<(ostream& saved, const HeroStatus& heroStatus){
 	saved << heroStatus.skillPoint << endl;
 	saved << heroStatus.physicalDefense << endl;
 	saved << heroStatus.magicDefense << endl;
+	saved << heroStatus.heroMPMax << endl;
+	saved << heroStatus.heroMPNow << endl;
 }
 
 istream& operator >>(istream& load, HeroStatus& heroStatus){
@@ -148,5 +185,7 @@ istream& operator >>(istream& load, HeroStatus& heroStatus){
 	load >> (heroStatus.skillPoint);
 	load >> (heroStatus.physicalDefense);
 	load >> (heroStatus.magicDefense);
+	load >> heroStatus.heroMPMax;
+	load >> heroStatus.heroMPNow;
 	return load;
 }

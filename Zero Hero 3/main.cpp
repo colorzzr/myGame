@@ -62,7 +62,7 @@ void youDie(){
 void movingTraining (char target, Field* map){
 	char command;
 	while (command != target) {
-		cout << "Please enter the '"<< target <<"' and press 'enter' for moving up" << endl;
+		cout << "Please enter the '"<< target <<"' and press 'enter' for moving up." << endl;
 		cin >> command;
 		map->controlPanel(command);
 		map->printField();
@@ -74,7 +74,7 @@ void movingTraining (char target, Field* map){
 void battleTraining (Field* map, int heroLocX, int heroLocY){
 	while (map->getMapChar (heroLocX, heroLocY + 1) != '0'){
 		map->printField();
-		cout << "Well done! now let us engage in battle" << endl;
+		cout << "Well done! now let us engage in battle." << endl;
 		cout << "Moving to enemy(1)" << endl;
 		map->controlPanel();
 		map->changeStep(0);
@@ -88,8 +88,8 @@ void itemUseTrain(Field* map){
 	while (map->getHealBottle() != (bottleInBag - 1)){
 		map->printField();
 		cout << "Ok now, you are hurted after battle" << endl;
-		cout << "Press 'i' go to main list then press 'i' go to item bag" << endl;
-		cout << "Press 'h' for checking infomation of healBottle and Use it!" << endl; 
+		cout << "Press 'i' go to main list then press 'i' go to item bag." << endl;
+		cout << "Press 'h' for checking infomation of healBottle and Use it!." << endl; 
 		map->controlPanel();
 		map->changeStep(0);
 
@@ -102,7 +102,6 @@ void tutouial (Field* map){
 	int heroLocX, heroLocY;
 	heroLocX = map->getHeroLocX();
 	heroLocY = map->getHeroLocY();
-
 	//ask user to choose skip
 	cout << "Do you want skip tutouial?" << endl;
 	while(command != 'y' && command != 'n'){
@@ -111,11 +110,12 @@ void tutouial (Field* map){
 	//skip tut
 	if(command == 'y') return;
 	
-
+	//add guide on the left-top conner
+	map->addThingsOnMap(0, 0, 'g');
 	map->printField();
 	cout << "Hello hero! Welcome to the Digital world!" << endl;
 	cout << "I am the guidance, Color !" << endl;
-	cout << "Let me introduce the basic command" << endl;
+	cout << "Let me introduce the basic command." << endl;
 	//moving training
 	movingTraining('w', map);
 	movingTraining('s', map);
@@ -123,11 +123,12 @@ void tutouial (Field* map){
 	movingTraining('d', map);
 	map->changeStep(0);
 	//now tut for battle
-	map->addEnemy(heroLocX, heroLocY + 1);
+	map->addThingsOnMap(heroLocX, heroLocY + 1, '1');
 	system("clear");
 	battleTraining(map, heroLocX, heroLocY);
 	itemUseTrain(map);
 	cout << "Congratulations! Now you can explore the world." << endl;
+	map->addThingsOnMap(0, 0, '-');
 	sleep(1);
 	/*system("clear");
 */

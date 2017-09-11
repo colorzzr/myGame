@@ -92,7 +92,9 @@ void Bag::printBagItem(HeroStatus* heroStatus){
     	else if (usedItemName != 'a') ItemUse(usedItemName, heroStatus);
 	}
 }
+//-------------------------------------Justice line------------------------------------------
 
+//for coin
 int Bag::getCoin(){
 	return coin;
 }
@@ -112,7 +114,9 @@ void Bag::changeBeanSoup(){
 int Bag::getHealBottle(){
     return healBottle;
 }
+//--------------------------------------Justice line-------------------------------------------------
 
+//for overloading
 ostream& operator <<(ostream& saved, const Bag& bag){
 	saved << bag.coin << endl;
 	saved << bag.healBottle << endl;

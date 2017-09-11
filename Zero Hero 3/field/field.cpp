@@ -141,11 +141,13 @@ void Field::openMainList(){
 	while(true){
 		cout << "**************************" << endl;
     	cout << "* HP: " << heroStatus->getHeroHpNow() << "/" << heroStatus->getHeroHpMax() << "  * (i)Items   *" << endl;
+    	cout << "* MP: "<< heroStatus->getHeroMpNow() << " / " << heroStatus->getHeroMpMax() << "  * (e)equip   *" << endl;
     	cout << "* Coin: " << bag->getCoin() << "   * (k)Skill   *" << endl;
     	cout << "* Level: " << heroStatus->getLevel() << "  * (s)Status  *" << endl;
     	cout << "* EXP: "<< heroStatus->getEXP() << "/" << heroStatus->getLevelUpEXP() << " * (o)Save    *" << endl;
     	cout << "**************************" << endl;
     	cout << "Press 'q' to go back" << endl;
+    	if(step < 2) cout << "Press 'i' and enter to check your items" << endl;
     
     	char command;
 		cin >> command;
@@ -333,8 +335,8 @@ void Field::changeStep(int input){
 }
 
 //for edit the map
-void Field::addEnemy(int row, int col){
-	map[row][col] = '1';
+void Field::addThingsOnMap(int row, int col, char chara){
+	map[row][col] = chara;
 }
 
 //check the map

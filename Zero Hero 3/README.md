@@ -39,13 +39,13 @@ Unable to workout reading without `enter` in c++
 
 # TO DO
  - change the battle algorithm(srand())
- - change the coin bar in  battle engage
  - change the phy and mag defence calculation
  - add more guan ka
  - add story
  - fix up
- - add story and tutourial
-
+ - add story and hidden story(when you kill guidence) guidence is actually one of boss
+ - update item
+ - add skill
 
 
 # Version:
@@ -70,6 +70,8 @@ change gcc compiler to CMake
 
 ---
 
-### Beta 1.0
+### Beta 1.1
 
-add tutourial
+add tutourial update guiden character
+
+add MP feature
