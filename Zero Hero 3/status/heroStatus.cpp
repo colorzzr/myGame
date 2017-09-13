@@ -2,6 +2,7 @@
 #include <cstdlib>
 
 #include "heroStatus.h"
+#include "../skill/skill.h"
 
 using namespace std;
 
@@ -10,9 +11,9 @@ HeroStatus::HeroStatus(){
 	heroHPNow = 20;
 	heroMPMax = 5;
 	heroMPNow = 5;
-	EXP = 0;
+	EXP = 19;
 	levelUpEXP = 20;
-	level = 1;
+	level = 4;
 	STR = 5; 
 	INTE = 5;
 	LUC = 5;
@@ -20,7 +21,7 @@ HeroStatus::HeroStatus(){
 	skillPoint = 0;
 	physicalDefense = STR * 0.6 + LUC * 0.2 + AGI * 0.1;
 	magicDefense = STR * 0.2 + LUC * 0.6 + AGI * 0.15;
-	skillList = NULL;
+	skillPhaser = new SkillPhaser;
 }
 
 HeroStatus::~HeroStatus(){
@@ -115,20 +116,32 @@ void HeroStatus::changeHeroMpMax(int val){
  ***********************************/
 
 void HeroStatus::checkForLearningSkill(){
-	if(level == 5){
-		SkillNode* temp = new SkillNode;
-		temp->skillName = strongAttack;
-		skillList->next = temp;
+	//skill1: strongAttack
+	if(level == 3){
+		cout << "Learned Skill!!!" << endl;
+		skillPhaser->learnedSkill();
 	}
+	//skill2: recover
+	else if(level == 5){
+		cout << "Learned Skill!!!" << endl;
+		skillPhaser->learnedSkill();
+	}
+	//skill3: deathHit
+	else if(level == 9){
+		cout << "Learned Skill!!!" << endl;
+		skillPhaser->learnedSkill();
+	}
+	//skill4: divineShield
+	else if(level == 15){
+		cout << "Learned Skill!!!" << endl;
+		skillPhaser->learnedSkill();
+	}
+	
 }
 
+//accesss to SkillPhaser for printing skill
 void HeroStatus::printSkill(){
-	SkillNode* headList = skillList;
-	cout << "skillList" << endl;
-	while(headList != NULL) {
-		cout << headList->skillName << endl;
-		headList = headList->next;
-	}
+	skillPhaser->printPhaser();
 }
 
 //-----------------------------------------Justice line-------------------------------------------------

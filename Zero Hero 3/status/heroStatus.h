@@ -23,7 +23,7 @@ private:
 	int skillPoint;
 	int physicalDefense;
 	int magicDefense;
-	SkillNode* skillList;
+	SkillPhaser* skillPhaser;
 public:
 	HeroStatus();
 	~HeroStatus();

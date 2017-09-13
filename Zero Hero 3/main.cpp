@@ -4,6 +4,7 @@
 #include <cmath>
 
 
+#include "rlutil.h"
 #include "field/field.h"
 
 using namespace std;
@@ -47,6 +48,8 @@ void greeting(){
 
 void youDie(){
 	system("clear");
+
+	rlutil::setColor(4);
 	cout << "...\n" << endl;
 	sleep(1);
 	cout << ".....\n" << endl;
@@ -56,6 +59,7 @@ void youDie(){
 	cout << "HAHAHAHAH......\n" << endl;
 	sleep(1);
 	cout << "That is the end. I think...." << endl;
+	rlutil::resetColor();
 }
 
 //ask user to move up down left right once

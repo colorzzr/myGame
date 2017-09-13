@@ -14,5 +14,6 @@ add_executable(
 	field/field.cpp
 	status/enemyStatus.cpp
 	status/heroStatus.cpp
+	skill/skill.cpp
 
 )

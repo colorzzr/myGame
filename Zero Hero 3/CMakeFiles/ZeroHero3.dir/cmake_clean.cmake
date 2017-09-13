@@ -5,6 +5,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/ZeroHero3.dir/field/field.cpp.o"
   "CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o"
   "CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o"
+  "CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o"
   "ZeroHero3.pdb"
   "ZeroHero3"
 )

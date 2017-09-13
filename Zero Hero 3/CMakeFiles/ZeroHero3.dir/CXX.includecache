@@ -13,6 +13,12 @@
 /home/color/myGame/Zero Hero 3/./extraFunction.h
 
 /home/color/myGame/Zero Hero 3/./skill/skill.h
+map
+-
+cstdlib
+-
+iostream
+-
 
 /home/color/myGame/Zero Hero 3/./status/enemyStatus.h
 heroStatus.h
@@ -83,10 +89,52 @@ string
 -
 cmath
 -
+rlutil.h
+/home/color/myGame/Zero Hero 3/rlutil.h
 field/field.h
 /home/color/myGame/Zero Hero 3/field/field.h
 
+/home/color/myGame/Zero Hero 3/rlutil.h
+iostream
+-
+string
+-
+cstdio
+-
+stdio.h
+-
+string.h
+-
+windows.h
+-
+conio.h
+-
+termios.h
+-
+unistd.h
+-
+sys/ioctl.h
+-
+sys/types.h
+-
+sys/time.h
+-
+
+/home/color/myGame/Zero Hero 3/skill/skill.cpp
+iostream
+-
+skill.h
 /home/color/myGame/Zero Hero 3/skill/skill.h
+map
+-
+
+/home/color/myGame/Zero Hero 3/skill/skill.h
+map
+-
+cstdlib
+-
+iostream
+-
 
 /home/color/myGame/Zero Hero 3/status/enemyStatus.cpp
 iostream
@@ -107,6 +155,8 @@ cstdlib
 -
 heroStatus.h
 /home/color/myGame/Zero Hero 3/status/heroStatus.h
+../skill/skill.h
+/home/color/myGame/Zero Hero 3/skill/skill.h
 
 /home/color/myGame/Zero Hero 3/status/heroStatus.h
 enemyStatus.h

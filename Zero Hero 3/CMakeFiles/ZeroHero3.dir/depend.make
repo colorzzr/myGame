@@ -24,9 +24,13 @@ CMakeFiles/ZeroHero3.dir/field/field.cpp.o: status/heroStatus.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: bag/bagInfo.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: field/field.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: main.cpp
+CMakeFiles/ZeroHero3.dir/main.cpp.o: rlutil.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: skill/skill.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: status/enemyStatus.h
 CMakeFiles/ZeroHero3.dir/main.cpp.o: status/heroStatus.h
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: skill/skill.cpp
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: skill/skill.h
 
 CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o: skill/skill.h
 CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o: status/enemyStatus.cpp

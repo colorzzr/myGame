@@ -207,6 +207,30 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+skill/skill.o: skill/skill.cpp.o
+.PHONY : skill/skill.o
+
+# target to build an object file
+skill/skill.cpp.o:
+	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o
+.PHONY : skill/skill.cpp.o
+
+skill/skill.i: skill/skill.cpp.i
+.PHONY : skill/skill.i
+
+# target to preprocess a source file
+skill/skill.cpp.i:
+	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/skill/skill.cpp.i
+.PHONY : skill/skill.cpp.i
+
+skill/skill.s: skill/skill.cpp.s
+.PHONY : skill/skill.s
+
+# target to generate assembly for a file
+skill/skill.cpp.s:
+	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/skill/skill.cpp.s
+.PHONY : skill/skill.cpp.s
+
 status/enemyStatus.o: status/enemyStatus.cpp.o
 .PHONY : status/enemyStatus.o
 
@@ -276,6 +300,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... skill/skill.o"
+	@echo "... skill/skill.i"
+	@echo "... skill/skill.s"
 	@echo "... status/enemyStatus.o"
 	@echo "... status/enemyStatus.i"
 	@echo "... status/enemyStatus.s"

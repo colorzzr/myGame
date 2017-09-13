@@ -187,6 +187,29 @@ CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o.provides: CMakeFiles/ZeroHero3.
 
 CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o
 
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: skill/skill.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o -c "/home/color/myGame/Zero Hero 3/skill/skill.cpp"
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZeroHero3.dir/skill/skill.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/color/myGame/Zero Hero 3/skill/skill.cpp" > CMakeFiles/ZeroHero3.dir/skill/skill.cpp.i
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZeroHero3.dir/skill/skill.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/color/myGame/Zero Hero 3/skill/skill.cpp" -o CMakeFiles/ZeroHero3.dir/skill/skill.cpp.s
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.requires:
+.PHONY : CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.requires
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.provides: CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.provides.build
+.PHONY : CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.provides
+
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o
+
 # Object files for target ZeroHero3
 ZeroHero3_OBJECTS = \
 "CMakeFiles/ZeroHero3.dir/main.cpp.o" \
@@ -194,7 +217,8 @@ ZeroHero3_OBJECTS = \
 "CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o" \
 "CMakeFiles/ZeroHero3.dir/field/field.cpp.o" \
 "CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o" \
-"CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o"
+"CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o" \
+"CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o"
 
 # External object files for target ZeroHero3
 ZeroHero3_EXTERNAL_OBJECTS =
@@ -205,6 +229,7 @@ ZeroHero3: CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o
 ZeroHero3: CMakeFiles/ZeroHero3.dir/field/field.cpp.o
 ZeroHero3: CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o
 ZeroHero3: CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o
+ZeroHero3: CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o
 ZeroHero3: CMakeFiles/ZeroHero3.dir/build.make
 ZeroHero3: CMakeFiles/ZeroHero3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ZeroHero3"
@@ -220,6 +245,7 @@ CMakeFiles/ZeroHero3.dir/requires: CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o.re
 CMakeFiles/ZeroHero3.dir/requires: CMakeFiles/ZeroHero3.dir/field/field.cpp.o.requires
 CMakeFiles/ZeroHero3.dir/requires: CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o.requires
 CMakeFiles/ZeroHero3.dir/requires: CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o.requires
+CMakeFiles/ZeroHero3.dir/requires: CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o.requires
 .PHONY : CMakeFiles/ZeroHero3.dir/requires
 
 CMakeFiles/ZeroHero3.dir/clean:
