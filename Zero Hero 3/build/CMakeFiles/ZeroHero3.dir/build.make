@@ -38,7 +38,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/home/color/myGame/Zero Hero 3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/color/myGame/Zero Hero 3"
+CMAKE_BINARY_DIR = "/home/color/myGame/Zero Hero 3/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ZeroHero3.dir/depend.make
@@ -50,8 +50,8 @@ include CMakeFiles/ZeroHero3.dir/progress.make
 include CMakeFiles/ZeroHero3.dir/flags.make
 
 CMakeFiles/ZeroHero3.dir/main.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/main.cpp.o: main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_1)
+CMakeFiles/ZeroHero3.dir/main.cpp.o: ../main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/main.cpp.o -c "/home/color/myGame/Zero Hero 3/main.cpp"
 
@@ -73,8 +73,8 @@ CMakeFiles/ZeroHero3.dir/main.cpp.o.provides: CMakeFiles/ZeroHero3.dir/main.cpp.
 CMakeFiles/ZeroHero3.dir/main.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/main.cpp.o
 
 CMakeFiles/ZeroHero3.dir/battle.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/battle.cpp.o: battle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_2)
+CMakeFiles/ZeroHero3.dir/battle.cpp.o: ../battle.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/battle.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/battle.cpp.o -c "/home/color/myGame/Zero Hero 3/battle.cpp"
 
@@ -96,8 +96,8 @@ CMakeFiles/ZeroHero3.dir/battle.cpp.o.provides: CMakeFiles/ZeroHero3.dir/battle.
 CMakeFiles/ZeroHero3.dir/battle.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/battle.cpp.o
 
 CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o: bag/bagInfo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_3)
+CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o: ../bag/bagInfo.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o -c "/home/color/myGame/Zero Hero 3/bag/bagInfo.cpp"
 
@@ -119,8 +119,8 @@ CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o.provides: CMakeFiles/ZeroHero3.dir/ba
 CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/bag/bagInfo.cpp.o
 
 CMakeFiles/ZeroHero3.dir/field/field.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/field/field.cpp.o: field/field.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_4)
+CMakeFiles/ZeroHero3.dir/field/field.cpp.o: ../field/field.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/field/field.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/field/field.cpp.o -c "/home/color/myGame/Zero Hero 3/field/field.cpp"
 
@@ -142,8 +142,8 @@ CMakeFiles/ZeroHero3.dir/field/field.cpp.o.provides: CMakeFiles/ZeroHero3.dir/fi
 CMakeFiles/ZeroHero3.dir/field/field.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/field/field.cpp.o
 
 CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o: status/enemyStatus.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_5)
+CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o: ../status/enemyStatus.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o -c "/home/color/myGame/Zero Hero 3/status/enemyStatus.cpp"
 
@@ -165,8 +165,8 @@ CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o.provides: CMakeFiles/ZeroHero3
 CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/status/enemyStatus.cpp.o
 
 CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o: status/heroStatus.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_6)
+CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o: ../status/heroStatus.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o -c "/home/color/myGame/Zero Hero 3/status/heroStatus.cpp"
 
@@ -188,8 +188,8 @@ CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o.provides: CMakeFiles/ZeroHero3.
 CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o.provides.build: CMakeFiles/ZeroHero3.dir/status/heroStatus.cpp.o
 
 CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: CMakeFiles/ZeroHero3.dir/flags.make
-CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: skill/skill.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles" $(CMAKE_PROGRESS_7)
+CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o: ../skill/skill.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles" $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ZeroHero3.dir/skill/skill.cpp.o -c "/home/color/myGame/Zero Hero 3/skill/skill.cpp"
 
@@ -253,6 +253,6 @@ CMakeFiles/ZeroHero3.dir/clean:
 .PHONY : CMakeFiles/ZeroHero3.dir/clean
 
 CMakeFiles/ZeroHero3.dir/depend:
-	cd "/home/color/myGame/Zero Hero 3" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3/CMakeFiles/ZeroHero3.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/color/myGame/Zero Hero 3/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3" "/home/color/myGame/Zero Hero 3/build" "/home/color/myGame/Zero Hero 3/build" "/home/color/myGame/Zero Hero 3/build/CMakeFiles/ZeroHero3.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ZeroHero3.dir/depend
 

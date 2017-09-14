@@ -50,7 +50,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/home/color/myGame/Zero Hero 3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/color/myGame/Zero Hero 3"
+CMAKE_BINARY_DIR = "/home/color/myGame/Zero Hero 3/build"
 
 #=============================================================================
 # Target rules for target CMakeFiles/ZeroHero3.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/home/color/myGame/Zero Hero 3"
 CMakeFiles/ZeroHero3.dir/all:
 	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/depend
 	$(MAKE) -f CMakeFiles/ZeroHero3.dir/build.make CMakeFiles/ZeroHero3.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/CMakeFiles"  1 2 3 4 5 6 7
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/color/myGame/Zero Hero 3/build/CMakeFiles"  1 2 3 4 5 6 7
 	@echo "Built target ZeroHero3"
 .PHONY : CMakeFiles/ZeroHero3.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/ZeroHero3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ZeroHero3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/color/myGame/Zero Hero 3/CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/color/myGame/Zero Hero 3/build/CMakeFiles" 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ZeroHero3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/color/myGame/Zero Hero 3/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/color/myGame/Zero Hero 3/build/CMakeFiles" 0
 .PHONY : CMakeFiles/ZeroHero3.dir/rule
 
 # Convenience name for target.
