@@ -27,6 +27,7 @@ enum Skill{
 class SkillPhaser{
 	map<Skill, string> skill2String;
 	//this is for list the skill
+	map<Skill, int> skill2Int;
 	map<int, Skill> int2Skill;
 	/************************************
 	 * it is like a heap				*
@@ -45,8 +46,9 @@ class SkillPhaser{
 	int skillHeroHave;
 public:
 	SkillPhaser();
-	void printPhaser();
+	void printSkill();
 	void learnedSkill();
+	void detailOfSkill(int input);
 };
 
 #endif

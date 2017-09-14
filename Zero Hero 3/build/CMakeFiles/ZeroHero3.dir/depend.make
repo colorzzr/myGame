@@ -13,6 +13,7 @@ CMakeFiles/ZeroHero3.dir/battle.cpp.o: .././skill/skill.h
 CMakeFiles/ZeroHero3.dir/battle.cpp.o: .././status/enemyStatus.h
 CMakeFiles/ZeroHero3.dir/battle.cpp.o: .././status/heroStatus.h
 CMakeFiles/ZeroHero3.dir/battle.cpp.o: ../battle.cpp
+CMakeFiles/ZeroHero3.dir/battle.cpp.o: ../rlutil.h
 
 CMakeFiles/ZeroHero3.dir/field/field.cpp.o: ../bag/bagInfo.h
 CMakeFiles/ZeroHero3.dir/field/field.cpp.o: ../field/field.cpp

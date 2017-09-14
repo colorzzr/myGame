@@ -141,7 +141,7 @@ void HeroStatus::checkForLearningSkill(){
 
 //accesss to SkillPhaser for printing skill
 void HeroStatus::printSkill(){
-	skillPhaser->printPhaser();
+	skillPhaser->printSkill();
 }
 
 //-----------------------------------------Justice line-------------------------------------------------

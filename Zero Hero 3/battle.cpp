@@ -5,6 +5,7 @@
 #include "./status/enemyStatus.h"
 #include "./bag/bagInfo.h"
 #include "./extraFunction.h"
+#include "rlutil.h"
 
 using namespace std;
 
@@ -25,7 +26,14 @@ void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int en
     system("clear");
     cout << "************************************" << endl;
     cout << "*   0         1      * Hp: " << enemyHpNow << "/" << enemyStatus->enemyHPMax << "     *" << endl;
-    cout << "*  /|\\------>/|\\     * attack: " << enemyStatus->attack << "   *" << endl;
+    cout << "*  /|\\";
+    //change the color of hit '------>'
+
+    rlutil::setColor(4);
+    cout << "------>";
+    rlutil::resetColor();
+
+    cout <<"/|\\     * attack: " << enemyStatus->attack << "   *" << endl;
     cout << "*  / \\       / \\     * defence: " << enemyStatus->defence << "  *" << endl;
     cout << "***************************************" << endl;
     cout << "* HP: " << heroStatus->heroHPNow << " / " << heroStatus->heroHPMax << " * (a)Attack | (i)Items  *" << endl;
@@ -37,18 +45,18 @@ void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int en
 }
 
 void openAnimation(){
-	cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
-    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
-    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
-    cout << "♥♥ ***      *   ********** *   ****  * ♥♥" << endl;
-    cout << "♥♥ *  *    * *    *    *   *   *     * ♥♥" << endl;
-    cout << "♥♥ * **   *   *   *    *   *   ****  * ♥♥" << endl;
-    cout << "♥♥ *   * *******  *    *   *   *       ♥♥" << endl;
-    cout << "♥♥ ****  *     *  *    *   *** ****  * ♥♥" << endl;
-    cout << "♥♥ ----------------------------------- ♥♥" << endl;
-    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
-    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
-    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+	cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+    cout << "♥♥ ***      *   ********** *   ****  ♥♥" << endl;
+    cout << "♥♥ *  *    * *    *    *   *   *     ♥♥" << endl;
+    cout << "♥♥ * **   *   *   *    *   *   ****  ♥♥" << endl;
+    cout << "♥♥ *   * *******  *    *   *   *     ♥♥" << endl;
+    cout << "♥♥ ****  *     *  *    *   *** ****  ♥♥" << endl;
+    cout << "♥♥ --------------------------------- ♥♥" << endl;
+    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
+    cout << "♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥" << endl;
     sleep(1);
     system("clear");
 
