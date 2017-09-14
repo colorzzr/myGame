@@ -51,7 +51,8 @@ Unable to workout reading without `enter` in c++
  - fix up
  - add story and hidden story(when you kill guidence) guidence is actually one of boss
  - update item
- - add skill
+ - add different heros + skills
+ - change color!
 
 
 # Version:
