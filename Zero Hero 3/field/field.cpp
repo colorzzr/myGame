@@ -112,6 +112,9 @@ bool Field::battleEngage(){
 				break;
 			}
 		}
+		else if(command == 's'){
+
+		}
 	}
          
     //hero level up           

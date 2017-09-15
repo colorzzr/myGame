@@ -77,10 +77,12 @@ change gcc compiler to CMake
 
 ---
 
-### Beta 1.2
+### Beta 1.2.1
 
 add tutourial update guiden character
 
 add MP feature
 
 update skill feature
+
+add skill detail
