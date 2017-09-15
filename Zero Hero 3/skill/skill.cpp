@@ -53,7 +53,10 @@ void SkillPhaser::printSkill(){
 	for(int i = 1; i <= skillHeroHave; i++){
 		cout << "*   " << skill2String[int2Skill[i]] << " "<< i <<"   *" << endl;
 	}
-	cout << "**********************" << endl;
+	cout << "*********************" << endl;
+}
+
+void SkillPhaser::detailOfSkill(){
 	//ask user to check skill
 	int cmd = 99;
 	cout << "which skill you want to check?(input number '0' to exit)" << endl;
@@ -61,17 +64,10 @@ void SkillPhaser::printSkill(){
 	while(cmd > numOfSkill){
 		cin >> cmd;
 	}
-	system("clear");
-	detailOfSkill(cmd);
-	system("clear");
-
-}
-
-void SkillPhaser::detailOfSkill(int input){
-	char cmd;
-	switch(input){
+	switch(cmd){
 		//just kick out the loop
 		case 0:
+		system("clear");
 		break;
 
 		//case 1: strong attack
@@ -84,6 +80,7 @@ void SkillPhaser::detailOfSkill(int input){
 		cout << "*********************" << endl;
 		cout << "Press any key to return" << endl;
 		cin >> cmd;
+		system("clear");
 		break;
 
 		//case 2: recover
@@ -96,6 +93,7 @@ void SkillPhaser::detailOfSkill(int input){
 		cout << "*********************" << endl;
 		cout << "Press any key to return" << endl;
 		cin >> cmd;
+		system("clear");
 		break;
 
 		//case 3: death hit
@@ -108,6 +106,7 @@ void SkillPhaser::detailOfSkill(int input){
 		cout << "*********************" << endl;
 		cout << "Press any key to return" << endl;
 		cin >> cmd;
+		system("clear");
 		break;
 
 		//case 4: divine shield
@@ -120,6 +119,7 @@ void SkillPhaser::detailOfSkill(int input){
 		cout << "*********************" << endl;
 		cout << "Press any key to return" << endl;
 		cin >> cmd;
+		system("clear");
 		break;
 	}
 }

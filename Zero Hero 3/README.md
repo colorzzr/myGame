@@ -10,12 +10,6 @@ To compile the cpp by using gcc you need
 ```
 After gcc filename.
 
-### file include
-remember a include b, b include c
-
-when a need use function c,
-
-we don't have to a include c 
 
 ### sharing friend function
 
@@ -47,12 +41,11 @@ Unable to workout reading without `enter` in c++
  - change the battle algorithm(srand())
  - change the phy and mag defence calculation
  - add more guan ka
- - add story
- - fix up
  - add story and hidden story(when you kill guidence) guidence is actually one of boss
  - update item
  - add different heros + skills
  - change color!
+ - change the overloaging operation
 
 
 # Version:

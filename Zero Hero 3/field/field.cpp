@@ -113,7 +113,7 @@ bool Field::battleEngage(){
 			}
 		}
 		else if(command == 's'){
-
+			heroStatus->printSkill();
 		}
 	}
          

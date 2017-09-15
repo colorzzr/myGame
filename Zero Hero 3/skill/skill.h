@@ -13,6 +13,7 @@ enum Skill{
 	recover,
 	deathHit,
 	divineShield
+	//battleCry
 };
 
 /***********************************************
@@ -48,7 +49,7 @@ public:
 	SkillPhaser();
 	void printSkill();
 	void learnedSkill();
-	void detailOfSkill(int input);
+	void detailOfSkill();
 };
 
 #endif
