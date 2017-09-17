@@ -45,6 +45,7 @@ public:
 	//for skill set
 	void printSkill();
 	void checkForLearningSkill();
+	SkillPhaser* getSkillPhaser();
 	//for exp
 	int getEXP();
 	void increaseEXP(int val);

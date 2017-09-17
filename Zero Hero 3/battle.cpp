@@ -3,6 +3,7 @@
 
 #include "./status/heroStatus.h"
 #include "./status/enemyStatus.h"
+#include "./skill/skill.h"
 #include "./bag/bagInfo.h"
 #include "./extraFunction.h"
 #include "rlutil.h"
@@ -85,5 +86,33 @@ void battleReward(HeroStatus* heroStatus, Bag* bag, int step){
     if(rand() % 5 == 2) bag->changeHealBottle();
     srand(step * (bag->getCoin() + 2));
     if(rand() % 9 == 3) bag->changeBeanSoup();
+}
 
+//make a function to use the skill when in battel
+int chooseSkill(SkillPhaser* skill){
+
+    cout << "**********************" << endl;
+    cout << "* Skill List         *" << endl;
+    for(int i = 1; i <= skill->skillHeroHave; i++){
+        cout << "*   -" << skill->skill2String[skill->int2Skill[i]] << " "<< i <<"   *" << endl;
+    }
+    cout << "**********************" << endl;
+
+    //ask user to use skill
+    int cmd = 99;
+    cout << "which skill you want to use?(input number '0' to exit)" << endl;
+    //to avoid reading detail when hero dont have
+    while(cmd > skill->skillHeroHave){
+        cin >> cmd;
+    }
+    switch(cmd){
+        //just kick out the loop
+        case 0:
+        break;
+
+        //strong attack
+        case 1:
+        cout << skill->skill2String[(skill->int2Skill[cmd])] << endl;
+
+    }
 }

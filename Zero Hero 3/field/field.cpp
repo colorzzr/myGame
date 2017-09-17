@@ -112,8 +112,9 @@ bool Field::battleEngage(){
 				break;
 			}
 		}
+		//for using skill
 		else if(command == 's'){
-			heroStatus->printSkill();
+			chooseSkill(heroStatus->getSkillPhaser());
 		}
 	}
          

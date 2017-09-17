@@ -145,6 +145,11 @@ void HeroStatus::printSkill(){
 	skillPhaser->detailOfSkill();
 }
 
+//get skillphaser for battle
+SkillPhaser* HeroStatus::getSkillPhaser(){
+	return skillPhaser;
+}
+
 //-----------------------------------------Justice line-------------------------------------------------
 /***********************************
  * below is related to hero level  *

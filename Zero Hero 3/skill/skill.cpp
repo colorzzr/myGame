@@ -50,18 +50,19 @@ SkillPhaser::SkillPhaser(){
  ****************************************************/
 void SkillPhaser::printSkill(){
 	cout << "**********************" << endl;
+	cout << "* Skill List         *" << endl;
 	for(int i = 1; i <= skillHeroHave; i++){
-		cout << "*   " << skill2String[int2Skill[i]] << " "<< i <<"   *" << endl;
+		cout << "*   -" << skill2String[int2Skill[i]] << " "<< i <<"  *" << endl;
 	}
-	cout << "*********************" << endl;
+	cout << "**********************" << endl;
 }
 
 void SkillPhaser::detailOfSkill(){
 	//ask user to check skill
 	int cmd = 99;
 	cout << "which skill you want to check?(input number '0' to exit)" << endl;
-	//beyond the case
-	while(cmd > numOfSkill){
+	//to avoid reading detail when hero dont have
+	while(cmd > skillHeroHave){
 		cin >> cmd;
 	}
 	switch(cmd){
