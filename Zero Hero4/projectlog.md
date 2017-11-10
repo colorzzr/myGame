@@ -1,4 +1,4 @@
-# ttttttttttttttttargey
+# ttttttttttttttttarget
 
  - make the control panel
  - make opening animation
