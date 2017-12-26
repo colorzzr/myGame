@@ -5,7 +5,7 @@
 using namespace std;
 
 void clock1(){
-	for(int i = 0; i < 199999999; i++);
+	for(int i = 0; i < 19999999; i++);
 }
 
 int main(int argc, char const *argv[]){
@@ -19,12 +19,26 @@ int main(int argc, char const *argv[]){
 	game.open("./game.txt");
 	clock << "Waiting for Ramdon Number Generator" << endl;
 
-	while(checking != "Waiting"){
+	while(/*checking != "Game" &&*/ checking != "Waiting"){
+		game.close();
+		game.open("./game.txt");
 		game >> checking;
+		cout << checking << endl;
 		cout << "Waiting for opening game" << endl;
 		clock1();
+		clock1();
+		clock1();
+		clock1();
+		clock1();
+		//clock1();
 		system("clear");
 	}
+	clock << "Waiting for Ramdon Number Generator" << endl;
+	clock1();
+	clock1();
+	clock1();
+	clock1();
+	clock1();clock1();
 	clock1();
 	clock1();
 	clock1();

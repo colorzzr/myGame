@@ -149,22 +149,28 @@ void loadingRamdonNumber(int& seed){
 	game << "Waiting for Ramdon Number Generator" << endl;
 
 	while(checking != "Waiting"){
+		clock.close();
+		clock.open("./clock.txt");
+		sleep(1);
 		cout << "Waiting for Ramdon Number Generator" << endl;
 		clock >> checking;
-		cout << checking;
+		cout << checking << endl;
 	}
 	game.close();
 	game.open("./game.txt");
+	clock.close();
+	clock.open("./clock.txt");
 	game << "Game Started!" << endl;
 	sleep(1);
+	greeting();
 	clock >> seed;
+	//cout << checking << endl;
 }
 
 int main (int argc, char** argv){
 	int seed = 0;
 	loadingRamdonNumber(seed);
 	cout << seed << endl;
-	greeting();
 	Field* map = new Field;
 	bool finished = false;
 	gameOption(map);
