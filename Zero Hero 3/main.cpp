@@ -2,10 +2,12 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <fstream>
 
 
 #include "rlutil.h"
 #include "field/field.h"
+//#include "extraFunction.h"
 
 using namespace std;
 
@@ -134,13 +136,34 @@ void tutouial (Field* map){
 	cout << "Congratulations! Now you can explore the world." << endl;
 	map->addThingsOnMap(0, 0, '-');
 	sleep(1);
-	/*system("clear");
-*/
+	
 }
 
+void loadingRamdonNumber(int& seed){
+	ofstream game;
+	ifstream clock;
+	string checking;
 
+	game.open("./game.txt");
+	clock.open("./clock.txt");
+	game << "Waiting for Ramdon Number Generator" << endl;
+
+	while(checking != "Waiting"){
+		cout << "Waiting for Ramdon Number Generator" << endl;
+		clock >> checking;
+		cout << checking;
+	}
+	game.close();
+	game.open("./game.txt");
+	game << "Game Started!" << endl;
+	sleep(1);
+	clock >> seed;
+}
 
 int main (int argc, char** argv){
+	int seed = 0;
+	loadingRamdonNumber(seed);
+	cout << seed << endl;
 	greeting();
 	Field* map = new Field;
 	bool finished = false;

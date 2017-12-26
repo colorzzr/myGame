@@ -102,6 +102,7 @@ int chooseSkill(SkillPhaser* skill){
     int cmd = 99;
     cout << "which skill you want to use?(input number '0' to exit)" << endl;
     //to avoid reading detail when hero dont have
+    cin >> cmd;
     while(cmd > skill->skillHeroHave){
         cin >> cmd;
     }
@@ -115,4 +116,5 @@ int chooseSkill(SkillPhaser* skill){
         cout << skill->skill2String[(skill->int2Skill[cmd])] << endl;
 
     }
+    system("clear");
 }
