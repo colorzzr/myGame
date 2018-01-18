@@ -180,7 +180,7 @@ int main (int argc, char** argv){
 	int seed = 0;
 	//loadingRamdonNumber(seed);
 	//cout << seed << endl;
-	Field* map = new Field;
+	Field* map = new Field();
 	bool finished = false;
 	gameOption(map);
 	while(finished != true){

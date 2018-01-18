@@ -16,8 +16,8 @@ Field::Field(){
 		}
 	}
 	//initial for all
-	heroStatus = new HeroStatus;
-	enemyStatus = new EnemyStatus;
+	heroStatus = new HeroStatus();
+	enemyStatus = new EnemyStatus();
 	bag = new Bag(step);
 	step = 0;
 }

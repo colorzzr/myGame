@@ -122,6 +122,8 @@ void SkillPhaser::detailOfSkill(){
 		cin >> cmd;
 		system("clear");
 		break;
+
+		default: break;
 	}
 }
 
@@ -129,6 +131,15 @@ void SkillPhaser::learnedSkill(){
 	skillHeroHave++;
 }
 
-int getSkillHeroHave() {
+int SkillPhaser::getSkillHeroHave() {
 	return skillHeroHave;
+}
+
+ostream& operator <<(ostream& saved, const SkillPhaser& skillPhaser){
+	saved << skillPhaser.skillHeroHave << endl;
+}
+	
+//remember here input operator dont need const
+istream& operator >>(istream& load, SkillPhaser& skillPhaser){
+	load >> skillPhaser.skillHeroHave;
 }

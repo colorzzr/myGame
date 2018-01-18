@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/color/myGame/Zero Hero 3/bag/bagInfo.cpp
+/home/color/myGame/Zero Hero 3/skill/skill.cpp
 iostream
 -
-cstdlib
+skill.h
+/home/color/myGame/Zero Hero 3/skill/skill.h
+map
 -
-bagInfo.h
-/home/color/myGame/Zero Hero 3/bag/bagInfo.h
-
-/home/color/myGame/Zero Hero 3/bag/bagInfo.h
-../status/heroStatus.h
-/home/color/myGame/Zero Hero 3/status/heroStatus.h
 
 /home/color/myGame/Zero Hero 3/skill/skill.h
 map
@@ -25,14 +21,4 @@ cstdlib
 -
 iostream
 -
-
-/home/color/myGame/Zero Hero 3/status/enemyStatus.h
-heroStatus.h
-/home/color/myGame/Zero Hero 3/status/heroStatus.h
-
-/home/color/myGame/Zero Hero 3/status/heroStatus.h
-enemyStatus.h
-/home/color/myGame/Zero Hero 3/status/enemyStatus.h
-../skill/skill.h
-/home/color/myGame/Zero Hero 3/skill/skill.h
 

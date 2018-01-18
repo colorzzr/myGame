@@ -50,9 +50,14 @@ public:
 	void printSkill();
 	void learnedSkill();
 	void detailOfSkill();
-	
+
 	int getSkillHeroHave();
 	friend int chooseSkill(SkillPhaser* skill);
+
+	friend ostream& operator <<(ostream& saved, const SkillPhaser& skillPhaser);
+	
+	//remember here input operator dont need const
+	friend istream& operator >>(istream& load, SkillPhaser& skillPhaser);
 };
 
 #endif

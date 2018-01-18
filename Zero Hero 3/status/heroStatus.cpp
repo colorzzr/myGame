@@ -212,6 +212,7 @@ ostream& operator <<(ostream& saved, const HeroStatus& heroStatus){
 	saved << heroStatus.magicDefense << endl;
 	saved << heroStatus.heroMPMax << endl;
 	saved << heroStatus.heroMPNow << endl;
+	saved << *heroStatus.skillPhaser << endl;
 }
 
 istream& operator >>(istream& load, HeroStatus& heroStatus){
@@ -229,5 +230,6 @@ istream& operator >>(istream& load, HeroStatus& heroStatus){
 	load >> (heroStatus.magicDefense);
 	load >> heroStatus.heroMPMax;
 	load >> heroStatus.heroMPNow;
+	load >> *heroStatus.skillPhaser;
 	return load;
 }
