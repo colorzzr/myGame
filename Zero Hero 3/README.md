@@ -79,3 +79,11 @@ add MP feature
 update skill feature
 
 add skill detail
+
+### Beta 1.2.2 2018.1.17
+
+updata the input interface 
+
+only accept one input per time
+
+

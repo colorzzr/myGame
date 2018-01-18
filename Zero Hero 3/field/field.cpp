@@ -75,8 +75,11 @@ void Field::printStatusBar(){
 
 void Field::getHeroLoc(){
 	int number;
+	//clear the buffer first
+	setbuf(stdin, NULL);
 	do{
 		cout << "please enter the location X and Y" << endl;
+		//get two location or do it again
 		number = scanf("%d%d", &heroLocX, &heroLocY);
 		//clear the buffer
 		setbuf(stdin, NULL);
@@ -93,8 +96,13 @@ bool Field::battleEngage(){
 	char command;
 	openAnimation();
 	while(1){
+		//print battle window
 		battleAnimationWait(heroStatus, enemyStatus, enemyHpNow);
+		//print help window
+		if(step < 2) cout << "type 'u' to attack enemy" << endl;
+
 		cin >> command;
+		cin.ignore(1000, '\n');
 		//escape
 		if(command == 'e') break;
 		//attack
@@ -131,6 +139,7 @@ void Field::printSkillSet(){
 	heroStatus->printSkill();
 }
 
+
 /************************************
  * main list structure				*
  * and it can load into sublist:	*
@@ -160,6 +169,8 @@ void Field::openMainList(){
     
     	char command;
 		cin >> command;
+		cin.ignore(1000, '\n');
+
 		if(command == 'q') break;
 		else if(command == 'i'){
 			//because of fear, we want to be stronger
@@ -203,7 +214,8 @@ bool Field::controlPanel(){
     char command;
     int youDie = false;
     do{
-    cin >> command;
+    	cin >> command;
+    	cin.ignore(1000, '\n');
     }while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'&& command != 'i'&& command != 'H');
     system("clear");
 
@@ -259,6 +271,7 @@ char Field::controlPanel(char input){
     int youDie = false;
     while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'&& command != 'i'&& command != 'H'){
     	cin >> command;
+    	cin.ignore(1000, '\n');
     };
     
     system("clear");

@@ -17,8 +17,13 @@ void tutouial (Field* map);
 void gameOption(Field* map){
 	cout << "    - New game(N)    " << endl;
 	cout << "    - Continue(C)    " << endl;
-	char command = 'a';
-	cin >> command;
+	char command;
+	do{
+		cin >> command;
+		cin.ignore(1000, '\n');
+	}
+	while(command != 'C' && command != 'c' && command != 'N' && command != 'n');
+	
 	//load game
 	if(command == 'C' || command == 'c'){
 		 if(map->loadSaved() == false) {
@@ -46,6 +51,7 @@ void greeting(){
 			break;
 		}
 	}
+	cin.ignore(1000, '\n');
 }
 
 void youDie(){
@@ -70,6 +76,8 @@ void movingTraining (char target, Field* map){
 	while (command != target) {
 		cout << "Please enter the '"<< target <<"' and press 'enter' for moving up." << endl;
 		cin >> command;
+		cin.ignore(1000, '\n');
+		if(command != target) continue;
 		map->controlPanel(command);
 		map->printField();
 		map->changeStep(0);
@@ -89,7 +97,7 @@ void battleTraining (Field* map, int heroLocX, int heroLocY){
 
 //guide user into bag and use healBottle
 void itemUseTrain(Field* map){
-	char command;
+	//char command;
 	int bottleInBag = map->getHealBottle();
 	while (map->getHealBottle() != (bottleInBag - 1)){
 		map->printField();
@@ -109,9 +117,10 @@ void tutouial (Field* map){
 	heroLocX = map->getHeroLocX();
 	heroLocY = map->getHeroLocY();
 	//ask user to choose skip
-	cout << "Do you want skip tutouial?" << endl;
 	while(command != 'y' && command != 'n'){
+		cout << "Do you want skip tutouial?" << endl;
 		cin >> command;
+		cin.ignore(1000, '\n');
 	}	
 	//skip tut
 	if(command == 'y') return;
@@ -169,8 +178,8 @@ void loadingRamdonNumber(int& seed){
 
 int main (int argc, char** argv){
 	int seed = 0;
-	loadingRamdonNumber(seed);
-	cout << seed << endl;
+	//loadingRamdonNumber(seed);
+	//cout << seed << endl;
 	Field* map = new Field;
 	bool finished = false;
 	gameOption(map);

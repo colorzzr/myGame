@@ -28,29 +28,35 @@ public:
 	HeroStatus();
 	~HeroStatus();
 	void printStatus();
+
 	//for Hp
 	int getHeroHpNow();
 	void changeHeroHpNow(int val);
 	int getHeroHpMax();
 	void changeHeroHpMax(int val);
+	
 	//for Mp
 	int getHeroMpNow();
 	void changeHeroMpNow(int val);
 	int getHeroMpMax();
 	void changeHeroMpMax(int val);
+	
 	//for level
 	int getLevel();
 	void changeLevel(int val);
 	void levelUp();
+	
 	//for skill set
 	void printSkill();
 	void checkForLearningSkill();
 	SkillPhaser* getSkillPhaser();
+	
 	//for exp
 	int getEXP();
 	void increaseEXP(int val);
 	int getLevelUpEXP();
 	void increaseLevelUpEXP(int val);
+	
 	//others
 	void addingStatusPoint();
 	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
@@ -58,6 +64,7 @@ public:
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 	friend ostream& operator <<(ostream& saved, const HeroStatus& heroStatus);
+	
 	//remember here input operator dont need const
 	friend istream& operator >>(istream& load, HeroStatus& heroStatus);
 };
