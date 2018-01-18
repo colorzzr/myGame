@@ -50,6 +50,8 @@ public:
 	void printSkill();
 	void learnedSkill();
 	void detailOfSkill();
+	
+	int getSkillHeroHave();
 	friend int chooseSkill(SkillPhaser* skill);
 };
 

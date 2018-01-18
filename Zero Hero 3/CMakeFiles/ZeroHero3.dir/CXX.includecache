@@ -6,63 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/color/myGame/Zero Hero 3/bag/bagInfo.h
-../status/heroStatus.h
-/home/color/myGame/Zero Hero 3/status/heroStatus.h
-
-/home/color/myGame/Zero Hero 3/field/field.h
-fstream
--
+/home/color/myGame/Zero Hero 3/bag/bagInfo.cpp
 iostream
 -
-../status/heroStatus.h
-/home/color/myGame/Zero Hero 3/status/heroStatus.h
-../status/enemyStatus.h
-/home/color/myGame/Zero Hero 3/status/enemyStatus.h
-../bag/bagInfo.h
-/home/color/myGame/Zero Hero 3/bag/bagInfo.h
-
-/home/color/myGame/Zero Hero 3/main.cpp
 cstdlib
 -
-iostream
--
-string
--
-cmath
--
-fstream
--
-rlutil.h
-/home/color/myGame/Zero Hero 3/rlutil.h
-field/field.h
-/home/color/myGame/Zero Hero 3/field/field.h
+bagInfo.h
+/home/color/myGame/Zero Hero 3/bag/bagInfo.h
 
-/home/color/myGame/Zero Hero 3/rlutil.h
-iostream
--
-string
--
-cstdio
--
-stdio.h
--
-string.h
--
-windows.h
--
-conio.h
--
-termios.h
--
-unistd.h
--
-sys/ioctl.h
--
-sys/types.h
--
-sys/time.h
--
+/home/color/myGame/Zero Hero 3/bag/bagInfo.h
+../status/heroStatus.h
+/home/color/myGame/Zero Hero 3/status/heroStatus.h
 
 /home/color/myGame/Zero Hero 3/skill/skill.h
 map

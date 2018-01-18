@@ -128,3 +128,7 @@ void SkillPhaser::detailOfSkill(){
 void SkillPhaser::learnedSkill(){
 	skillHeroHave++;
 }
+
+int getSkillHeroHave() {
+	return skillHeroHave;
+}

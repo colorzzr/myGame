@@ -30,6 +30,7 @@ void Bag::ItemUse(char name, HeroStatus* heroStatus){
 	        cout << "***********************" << endl;
         	cout << "Do you want use it ? (Y/N)" << endl;
         	cin >> command;
+            cin.ignore(1000, '\n');
         	if (command == 'Y' || command == 'y'){
         		//make sure user cannot use even they dont have bottle
         		if(healBottle <= 0) cout << "You dont have enough bottle!" << endl;
@@ -53,6 +54,7 @@ void Bag::ItemUse(char name, HeroStatus* heroStatus){
 	        cout << "***********************" << endl;
         	cout << "Do you want use it ? (Y/N)" << endl;
         	cin >> command;
+            cin.ignore(1000, '\n');
         	if (command == 'Y' || command == 'y'){
         		//make sure user cannot use even they dont have bottle
         		if(beanSoup <= 0) cout << "You dont have enough soup!" << endl;
@@ -88,9 +90,11 @@ void Bag::printBagItem(HeroStatus* heroStatus){
         if(step < 5) cout << "Press icon inside () to check infomation." << endl;
     	char usedItemName = 'a';
     	cin >> usedItemName;
+        cin.ignore(1000, '\n');
     	if (usedItemName == 'q') break;
     	else if (usedItemName != 'a') ItemUse(usedItemName, heroStatus);
 	}
+    system("clear");
 }
 //-------------------------------------Justice line------------------------------------------
 
