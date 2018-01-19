@@ -64,6 +64,7 @@ void SkillPhaser::detailOfSkill(){
 	//to avoid reading detail when hero dont have
 	while(cmd > skillHeroHave){
 		cin >> cmd;
+		cin.ignore(1000, '\n');
 	}
 	switch(cmd){
 		//just kick out the loop
@@ -125,6 +126,7 @@ void SkillPhaser::detailOfSkill(){
 
 		default: break;
 	}
+	cin.ignore(1000, '\n');
 }
 
 void SkillPhaser::learnedSkill(){

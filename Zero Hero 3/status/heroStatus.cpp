@@ -71,6 +71,20 @@ void HeroStatus::addingStatusPoint(){
 	magicDefense = STR * 0.2 + LUC * 0.6 + AGI * 0.15;
 }
 
+//--------------------------------get4status-----------------------------------------------
+int HeroStatus::getStr(){
+	return STR;
+}
+int HeroStatus::getInt(){
+	return INTE;
+}
+int HeroStatus::getAgi(){
+	return AGI;
+}
+int HeroStatus::getLuck(){
+	return LUC;
+}
+
 /*******************************
  * below is related to heroHP  *
  *******************************/
@@ -89,6 +103,8 @@ int HeroStatus::getHeroHpMax(){
 void HeroStatus::changeHeroHpMax(int val){
 	heroHPMax = val;
 }
+
+
 //---------------------------------------Justice line-------------------------------------------------
 
 

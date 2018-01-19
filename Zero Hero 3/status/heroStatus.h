@@ -29,6 +29,11 @@ public:
 	~HeroStatus();
 	void printStatus();
 
+	//get 4 status
+	int getStr();
+	int getInt();
+	int getAgi();
+	int getLuck();
 	//for Hp
 	int getHeroHpNow();
 	void changeHeroHpNow(int val);

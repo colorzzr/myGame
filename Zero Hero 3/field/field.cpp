@@ -104,7 +104,15 @@ bool Field::battleEngage(){
 		cin >> command;
 		cin.ignore(1000, '\n');
 		//escape
-		if(command == 'e') break;
+		//you have change to fail escaping
+		if(command == 'e'){
+			if(rand() % (5 + heroStatus->getAgi()) == 1) continue;
+			// if(1){
+			// 	cout << "fail" << endl;
+			// 	continue;
+			// }
+			else return false;
+		}
 		//attack
 		else if(command == 'a'){
 			battleAnimationHit(heroStatus,enemyStatus,enemyHpNow);
