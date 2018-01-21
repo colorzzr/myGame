@@ -6,21 +6,27 @@
 
 using namespace std;
 
-HeroStatus::HeroStatus(){
-	heroHPMax = 20;
-	heroHPNow = 20;
-	heroMPMax = 5;
+HeroStatus::HeroStatus(int heroLocX, int heroLocY){
+	//use XYlocation to sheffle the basic status
+	srand(heroLocX + heroLocY);
+	STR = 1 + rand() % 7; 
+	srand(heroLocX - heroLocY);
+	INTE = 1 + rand() % 7;
+	srand(heroLocX / heroLocY);
+	LUC = 1 + rand() % 7;
+	srand(heroLocX * heroLocY);
+	AGI = 1 + rand() % 7;
+
+	heroHPMax = 15 + 0.2 * STR + 0.1 * LUC;
+	heroHPNow = heroHPMax;
+	heroMPMax = 2 + 0.2 * INTE;
 	heroMPNow = 5;
 	EXP = 19;
 	levelUpEXP = 20;
 	level = 4;
-	STR = 5; 
-	INTE = 5;
-	LUC = 5;
-	AGI = 5;
 	skillPoint = 0;
-	physicalDefense = STR * 0.6 + LUC * 0.2 + AGI * 0.1;
-	magicDefense = STR * 0.2 + LUC * 0.6 + AGI * 0.15;
+	physicalDefense = STR * 0.3 + LUC * 0.2 + AGI * 0.1;
+	magicDefense = STR * 0.2 + LUC * 0.3 + AGI * 0.15;
 	skillPhaser = new SkillPhaser;
 }
 
@@ -159,6 +165,11 @@ void HeroStatus::checkForLearningSkill(){
 void HeroStatus::printSkill(){
 	skillPhaser->printSkill();
 	skillPhaser->detailOfSkill();
+}
+
+void HeroStatus::printSkillBattle(){
+	skillPhaser->printSkill();
+	skillPhaser->battleSkillChoose();
 }
 
 //get skillphaser for battle

@@ -9,23 +9,58 @@ class EnemyStatus;
 class Bag;
 class HeroStatus{
 private:
+	/********************************************************
+	 * strength related to the damage hero take and suffer	*
+	 * and phy and magic defense and HP 					*
+	 ********************************************************/
+	int STR; 
+
+	/************************************************
+	 * intellengcerelated to skill damage herotake 	*
+	 and the magic magicDefense 					*
+	 ************************************************/
+	int INTE;
+
+	/********************************************************
+	 * luck related to the physical and magic and critical 	*
+	 * and the HP  											*
+	 ********************************************************/
+	int LUC;
+
+	/********************************************
+	 * agility related to escape and miss ratr 	*
+	 ********************************************/
+	int AGI;
+
+	/********************************************
+	 * heroHPMax = 15 + 0.2 * STR + 0.1 * LUC; 	*
+	 ********************************************/
 	int heroHPMax;
 	int heroHPNow;
+
+	/********************************
+	 * heroMPMax = 2 + 0.2 * INTE;	*
+	 ********************************/
 	int heroMPMax;
 	int heroMPNow;
+
+	//levelUpEXP start with 20
 	int EXP;
 	int levelUpEXP;
 	int level;
-	int STR; 
-	int INTE;
-	int LUC;
-	int AGI;
 	int skillPoint;
+
+	/********************************************************
+	 * physicalDefense = STR * 0.3 + LUC * 0.2 + AGI * 0.1;	*
+	 * magicDefense = STR * 0.2 + LUC * 0.3 + AGI * 0.15;	*
+	 ********************************************************/
 	int physicalDefense;
 	int magicDefense;
+
+	//go for building the skill area
 	SkillPhaser* skillPhaser;
 public:
-	HeroStatus();
+	HeroStatus(int heroLocX, int heroLocY);
 	~HeroStatus();
 	void printStatus();
 
@@ -51,8 +86,20 @@ public:
 	void changeLevel(int val);
 	void levelUp();
 	
-	//for skill set
+	/****************************************************
+	 * function is to print the skill as following:		*
+	 * *****************								*
+	 * *   skill1   1  *								*
+	 * *   skill2   2  *								*
+	 * *   skill3   3  *								*
+	 * *****************								*
+	 * which skill you want to check(input number)?		*
+	 ****************************************************/
 	void printSkill();
+	//this function allow user the choos their skill in battle
+	void printSkillBattle();
+
+	//for skill set
 	void checkForLearningSkill();
 	SkillPhaser* getSkillPhaser();
 	
@@ -64,12 +111,18 @@ public:
 	
 	//others
 	void addingStatusPoint();
+
+	/************************************************
+	 * I made the battle be friend of Heroclass,	*
+	 * cos I need change lot for herostatus 		*
+	 ************************************************/
 	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
+
+	//overloading input and output opera for save
 	friend ostream& operator <<(ostream& saved, const HeroStatus& heroStatus);
-	
 	//remember here input operator dont need const
 	friend istream& operator >>(istream& load, HeroStatus& heroStatus);
 };

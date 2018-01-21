@@ -15,8 +15,10 @@ Field::Field(){
 			map[i][j] = '-';
 		}
 	}
+	//gnerate hero loc
+	getHeroLoc();
 	//initial for all
-	heroStatus = new HeroStatus();
+	heroStatus = new HeroStatus(heroLocX, heroLocY);
 	enemyStatus = new EnemyStatus();
 	bag = new Bag(step);
 	step = 0;
@@ -74,18 +76,15 @@ void Field::printStatusBar(){
 }
 
 void Field::getHeroLoc(){
-	int number;
-	//clear the buffer first
-	setbuf(stdin, NULL);
-	do{
-		cout << "please enter the location X and Y" << endl;
-		//get two location or do it again
-		number = scanf("%d%d", &heroLocX, &heroLocY);
-		//clear the buffer
-		setbuf(stdin, NULL);
-	}while(number != 2);
-	heroLocX = heroLocX % 10;
-	heroLocY = heroLocY % 10;
+	//update here using time to generate the random number
+	time_t timev;
+	time(&timev);
+	long int seed = timev;
+	//take the seed
+	srand(seed);
+	heroLocX = rand() % 10;
+	srand(heroLocX);
+	heroLocY = rand() % 10;
 	map[heroLocX][heroLocY] = '0';
 }
 
@@ -130,7 +129,7 @@ bool Field::battleEngage(){
 		}
 		//for using skill
 		else if(command == 's'){
-			chooseSkill(heroStatus->getSkillPhaser());
+			chooseSkill(heroStatus);
 		}
 	}
          
@@ -141,6 +140,17 @@ bool Field::battleEngage(){
 	}
 	sleep(1);
 	return youDie;
+}
+
+
+//make a function to use the skill when in battel
+int Field::chooseSkill(HeroStatus* heroStatus){
+
+    heroStatus->printSkillBattle();
+    //skill->printSkill();
+    
+    sleep(1);
+    system("clear");
 }
 
 void Field::printSkillSet(){

@@ -39,15 +39,7 @@ SkillPhaser::SkillPhaser(){
 
 }
 
-/****************************************************
- * function is to print the skill as following:		*
- * *****************								*
- * *   skill1   1  *								*
- * *   skill2   2  *								*
- * *   skill3   3  *								*
- * *****************								*
- * which skill you want to check(input number)?
- ****************************************************/
+
 void SkillPhaser::printSkill(){
 	cout << "**********************" << endl;
 	cout << "* Skill List         *" << endl;
@@ -126,8 +118,39 @@ void SkillPhaser::detailOfSkill(){
 
 		default: break;
 	}
-	cin.ignore(1000, '\n');
+	//cin.ignore(1000, '\n');
 }
+
+void SkillPhaser::battleSkillChoose(){
+	//ask user to use skill
+    int cmd = 99;
+    cout << "which skill you want to use?(input number '0' to exit)" << endl;
+    //to avoid reading detail when hero dont have
+    cin >> cmd;
+    cin.ignore(1000, '\n');
+    //check for valid skill number
+    while(cmd > skillHeroHave || cmd < 0){
+        cin >> cmd;
+    }
+    switch(cmd){
+        //just kick out the loop
+        case 0:
+        break;
+
+        //strong attack
+        case 1:
+        //show the text
+        cout << "--------!" 
+        << skill2String[(int2Skill[cmd])] << "!--------" << endl;
+        
+        //cal the damage
+
+
+        break;
+
+    }
+}
+
 
 void SkillPhaser::learnedSkill(){
 	skillHeroHave++;

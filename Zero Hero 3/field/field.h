@@ -51,15 +51,26 @@ public:
 	 *	**************************		*
 	 ************************************/
 	void openMainList();
+
 	bool battleEngage();
+	
 	bool loadSaved();
+	
 	int getHeroLocX();
 	int getHeroLocY();
+	
 	void changeStep(int input);
+	
 	char controlPanel(char input);
+	
 	void addThingsOnMap(int row, int col, char chara);
+	
 	char getMapChar(int row, int col);
+	
 	int getHealBottle();
+
+	int chooseSkill(HeroStatus* heroStatus);
+	
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 };
 //get a prototype for main using sleep

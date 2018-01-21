@@ -28,13 +28,13 @@ void gameOption(Field* map){
 	if(command == 'C' || command == 'c'){
 		 if(map->loadSaved() == false) {
 		 	cout << "You dont have saved slot! " << endl;
-		 	map->getHeroLoc();
+		 	//map->getHeroLoc();
 		 	tutouial(map);
 		 }
 	}
 	//starting game
 	else if (command == 'N' || command == 'n') {
-		map->getHeroLoc();
+		//map->getHeroLoc();
 		tutouial(map);
 	}
     system("clear");
@@ -177,10 +177,10 @@ void loadingRamdonNumber(int& seed){
 }
 
 int main (int argc, char** argv){
-	int seed = 0;
-	//loadingRamdonNumber(seed);
-	//cout << seed << endl;
+
 	Field* map = new Field();
+
+	//detect the hero death
 	bool finished = false;
 	gameOption(map);
 	while(finished != true){

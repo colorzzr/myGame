@@ -86,4 +86,11 @@ updata the input interface
 
 only accept one input per time
 
+### Beta 1.2.3 2018.1.19
+
+update the random algorithm using time to generate first location
+
+and update random algorithm to generation all basic status
+
+
 

@@ -47,12 +47,20 @@ class SkillPhaser{
 	int skillHeroHave;
 public:
 	SkillPhaser();
+
+	/****************************************************************
+	 * print the skill list hero have one by one and followed by.	*
+	 * checking detail of skill	 									*
+	 ****************************************************************/
 	void printSkill();
-	void learnedSkill();
 	void detailOfSkill();
 
+	void learnedSkill();
+
 	int getSkillHeroHave();
-	friend int chooseSkill(SkillPhaser* skill);
+
+	void battleSkillChoose();
+	//friend int chooseSkill(HeroStatus* heroStatus);
 
 	friend ostream& operator <<(ostream& saved, const SkillPhaser& skillPhaser);
 	
