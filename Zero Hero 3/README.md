@@ -37,17 +37,6 @@ you have to type the prototype on each file
 Unable to workout reading without `enter` in c++
 
 
-# TO DO
- - change the battle algorithm(srand())
- - change the phy and mag defence calculation
- - add more guan ka
- - add story and hidden story(when you kill guidence) guidence is actually one of boss
- - update item
- - add different heros + skills
- - change color!
- - change the overloading operation
-
-
 # Version:
 ### Alpha 1.8
 Basic movement
