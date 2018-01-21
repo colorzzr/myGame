@@ -31,7 +31,7 @@ HeroStatus::HeroStatus(int heroLocX, int heroLocY){
 }
 
 HeroStatus::~HeroStatus(){
-	
+	delete skillPhaser;
 }
 
 void HeroStatus::printStatus(){

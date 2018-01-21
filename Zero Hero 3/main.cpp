@@ -55,17 +55,17 @@ void greeting(){
 }
 
 void youDie(){
-	system("clear");
+	//system("clear");
 
 	rlutil::setColor(4);
 	cout << "...\n" << endl;
-	sleep(1);
+	//sleep(1);
 	cout << ".....\n" << endl;
-	sleep(1);
+	//sleep(1);
 	cout << ".........\n" << endl;
-	sleep(1);
+	//sleep(1);
 	cout << "HAHAHAHAH......\n" << endl;
-	sleep(1);
+	//sleep(1);
 	cout << "That is the end. I think...." << endl;
 	rlutil::resetColor();
 }
@@ -191,5 +191,8 @@ int main (int argc, char** argv){
 	}   	
 
 	youDie();
+
+	//destory everything
+	delete map;
 	return 0;
 }

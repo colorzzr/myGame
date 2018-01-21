@@ -26,6 +26,8 @@ Field::Field(){
 
 Field::~Field(){
 	delete heroStatus;
+	delete enemyStatus;
+	delete bag;
 }
 
 
@@ -233,12 +235,17 @@ bool Field::controlPanel(){
     int youDie = false;
     do{
     	cin >> command;
+    	if(cin.eof() == true) break;
     	cin.ignore(1000, '\n');
-    }while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'&& command != 'i'&& command != 'H');
+    }while(command != 'w' && command != 's'&& command != 'a'&& command != 'd'
+    		&& command != 'i'&& command != 'H');
     system("clear");
 
+
+    //exit the game
+    if(cin.eof() == true) return true;
     //for moving
-    if(command == 'w') {
+    else if(command == 'w') {
     	if(heroLocX > 0){
     		//engage battle
     		if(map[heroLocX - 1][heroLocY] == '1') youDie = battleEngage(); 

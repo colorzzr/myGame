@@ -45,7 +45,7 @@ Unable to workout reading without `enter` in c++
  - update item
  - add different heros + skills
  - change color!
- - change the overloaging operation
+ - change the overloading operation
 
 
 # Version:
@@ -92,5 +92,10 @@ update the random algorithm using time to generate first location
 
 and update random algorithm to generation all basic status
 
+### Beta 1.2.4 2018.1.20
+
+working on the skill in battle
+
+fix all bugs and memory leak
 
 
