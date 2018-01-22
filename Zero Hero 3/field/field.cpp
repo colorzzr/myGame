@@ -131,7 +131,7 @@ bool Field::battleEngage(){
 		}
 		//for using skill
 		else if(command == 's'){
-			chooseSkill(heroStatus);
+			chooseSkill();
 		}
 	}
          
@@ -146,11 +146,15 @@ bool Field::battleEngage(){
 
 
 //make a function to use the skill when in battel
-int Field::chooseSkill(HeroStatus* heroStatus){
-
-    heroStatus->printSkillBattle();
+int Field::chooseSkill(){
+	int enemyHpNow = enemyStatus->getEnemyHpNow();
+    Skill choosedSkill = heroStatus->printSkillBattle();
     //skill->printSkill();
-    
+    switch(choosedSkill){
+    	case strongAttack:
+    		
+    	break;
+    }
     sleep(1);
     system("clear");
 }

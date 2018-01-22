@@ -96,8 +96,11 @@ public:
 	 * which skill you want to check(input number)?		*
 	 ****************************************************/
 	void printSkill();
-	//this function allow user the choos their skill in battle
-	void printSkillBattle();
+	/****************************************************************
+	 * this function allow user the choos their skill in battle.	*
+	 * and return it for calculating funciton.						*
+	 ****************************************************************/
+	Skill printSkillBattle();
 
 	//for skill set
 	void checkForLearningSkill();

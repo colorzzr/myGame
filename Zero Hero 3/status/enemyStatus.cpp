@@ -22,3 +22,11 @@ void EnemyStatus::enemyLvUp(){
 int EnemyStatus::getEnemyHpMax(){
 	return enemyHPMax;
 }
+
+int EnemyStatus::getEnemyHpNow(){
+	return enemyHPNow;
+}
+
+void EnemyStatus::setEnemyHpNow(int input){
+	enemyHPNow = input;
+}

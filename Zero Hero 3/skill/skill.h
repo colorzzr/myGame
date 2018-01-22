@@ -59,8 +59,11 @@ public:
 
 	int getSkillHeroHave();
 
-	void battleSkillChoose();
-	//friend int chooseSkill(HeroStatus* heroStatus);
+	//use skill-to-string to print
+	void printSkillEnum(Skill skill);
+
+	//this function would return the skill user choose
+	Skill battleSkillChoose();
 
 	friend ostream& operator <<(ostream& saved, const SkillPhaser& skillPhaser);
 	

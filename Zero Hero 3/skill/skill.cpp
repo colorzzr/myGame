@@ -121,7 +121,7 @@ void SkillPhaser::detailOfSkill(){
 	//cin.ignore(1000, '\n');
 }
 
-void SkillPhaser::battleSkillChoose(){
+Skill SkillPhaser::battleSkillChoose(){
 	//ask user to use skill
     int cmd = 99;
     cout << "which skill you want to use?(input number '0' to exit)" << endl;
@@ -142,13 +142,17 @@ void SkillPhaser::battleSkillChoose(){
         //show the text
         cout << "--------!" 
         << skill2String[(int2Skill[cmd])] << "!--------" << endl;
+        //cout << int2Skill[cmd] << endl;
         
         //cal the damage
-
-
-        break;
+        return int2Skill[cmd];
 
     }
+}
+
+
+void SkillPhaser::printSkillEnum(Skill skill){
+	cout << skill2String[skill] << endl;
 }
 
 

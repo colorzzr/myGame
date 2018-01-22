@@ -167,9 +167,12 @@ void HeroStatus::printSkill(){
 	skillPhaser->detailOfSkill();
 }
 
-void HeroStatus::printSkillBattle(){
+Skill HeroStatus::printSkillBattle(){
 	skillPhaser->printSkill();
-	skillPhaser->battleSkillChoose();
+	return skillPhaser->battleSkillChoose();
+	//skillPhaser->printSkillEnum(choosedSkill);
+
+
 }
 
 //get skillphaser for battle

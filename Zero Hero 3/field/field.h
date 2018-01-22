@@ -69,8 +69,8 @@ public:
 	
 	int getHealBottle();
 
-	int chooseSkill(HeroStatus* heroStatus);
-	
+	int chooseSkill();
+
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 };
 //get a prototype for main using sleep
