@@ -7,3 +7,4 @@
  - add different heros + skills
  - change color!
  - change the overloading operation
+ - change all the funciton in the battle to member funciton
