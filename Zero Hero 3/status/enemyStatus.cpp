@@ -6,7 +6,7 @@
 using namespace std;
 //initial status enemy would be stronger as level up
 EnemyStatus::EnemyStatus(){
-	enemyHPMax = 5;
+	enemyHPMax = 10;
 	enemyHPNow = enemyHPMax;
 	attack = 3;
 	defence = 1;

@@ -118,6 +118,7 @@ bool Field::battleEngage(){
 		else if(command == 'a'){
 			battleAnimationHit(heroStatus,enemyStatus);
 			damageCalcu(heroStatus, enemyStatus);
+			//check the battle win
 			if (enemyStatus->getEnemyHpNow() <= 0) {
 				battleReward(heroStatus, bag, step);
 				enemyStatus->resetEnemyHp();
@@ -133,6 +134,17 @@ bool Field::battleEngage(){
 		//for using skill
 		else if(command == 's'){
 			chooseSkill();
+			if (enemyStatus->getEnemyHpNow() <= 0) {
+				battleReward(heroStatus, bag, step);
+				enemyStatus->resetEnemyHp();
+				cout << "You win !" << endl;
+				break;
+			}
+			//hero die
+			if (heroStatus->getHeroHpNow() <= 0){
+				youDie = true;
+				break;
+			}
 		}
 	}
          
@@ -148,16 +160,24 @@ bool Field::battleEngage(){
 
 //make a function to use the skill when in battel
 int Field::chooseSkill(){
+	//forming the local varible to speed up
 	int enemyHpNow = enemyStatus->getEnemyHpNow();
+	int heroHpNow = heroStatus->getHeroHpNow();
+	int heroMpNow = heroStatus->getHeroMpNow();
     Skill choosedSkill = heroStatus->printSkillBattle();
     //skill->printSkill();
     switch(choosedSkill){
     	case strongAttack:
-    		
+    		enemyHpNow = enemyHpNow - 3 - heroStatus->getStr();
+    		enemyStatus->setEnemyHpNow(enemyHpNow);
+    		heroMpNow--;
+    		heroStatus->setHeroMpNow(heroMpNow);
+
     	break;
     }
     sleep(1);
     system("clear");
+    return 1;
 }
 
 void Field::printSkillSet(){
@@ -366,7 +386,7 @@ bool Field::loadSaved(){
 		}while(row != 10);
 		//remove the heroloc by initial
 		map[heroLocX][heroLocY] = '-';
-		
+
 		load >> heroLocX >> heroLocY;
 		map[heroLocX][heroLocY] = '0';
 		//load the heroStatus and it is a pointer

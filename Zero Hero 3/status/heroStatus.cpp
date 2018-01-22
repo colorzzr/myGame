@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <cmath>
 
 #include "heroStatus.h"
 #include "../skill/skill.h"
@@ -17,16 +18,16 @@ HeroStatus::HeroStatus(int heroLocX, int heroLocY){
 	srand(heroLocX * heroLocY);
 	AGI = 1 + rand() % 7;
 
-	heroHPMax = 15 + 0.2 * STR + 0.1 * LUC;
+	heroHPMax = floor(15 + 0.2 * STR + 0.1 * LUC);
 	heroHPNow = heroHPMax;
-	heroMPMax = 2 + 0.2 * INTE;
-	heroMPNow = 5;
+	heroMPMax = floor(2 + 0.2 * INTE);
+	heroMPNow = heroMPMax;
 	EXP = 19;
 	levelUpEXP = 20;
 	level = 4;
 	skillPoint = 0;
-	physicalDefense = STR * 0.3 + LUC * 0.2 + AGI * 0.1;
-	magicDefense = STR * 0.2 + LUC * 0.3 + AGI * 0.15;
+	physicalDefense = floor(STR * 0.3 + LUC * 0.2 + AGI * 0.1);
+	magicDefense = floor(STR * 0.2 + LUC * 0.3 + AGI * 0.15);
 	skillPhaser = new SkillPhaser;
 }
 
@@ -121,7 +122,7 @@ int HeroStatus::getHeroMpNow(){
 	return heroMPNow;
 }
 
-void HeroStatus::changeHeroMpNow(int val){
+void HeroStatus::setHeroMpNow(int val){
 	heroMPNow = val;
 }
 
@@ -129,7 +130,7 @@ int HeroStatus::getHeroMpMax(){
 	return heroMPMax;
 }
 
-void HeroStatus::changeHeroMpMax(int val){
+void HeroStatus::setHeroMpMax(int val){
 	heroMPMax = val;
 }
 //-----------------------------------------Justice line-------------------------------------------------

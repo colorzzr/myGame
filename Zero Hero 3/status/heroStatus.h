@@ -77,9 +77,9 @@ public:
 	
 	//for Mp
 	int getHeroMpNow();
-	void changeHeroMpNow(int val);
+	void setHeroMpNow(int val);
 	int getHeroMpMax();
-	void changeHeroMpMax(int val);
+	void setHeroMpMax(int val);
 	
 	//for level
 	int getLevel();

@@ -95,7 +95,11 @@ remove the local varibal enemyHpnow
 
 fix the bug of two locations when loading the save
 
+### Beta 1.2.6 2018.1.22
 
+fix the floating point exception
+
+finish the first skill calculation
 
 
 
