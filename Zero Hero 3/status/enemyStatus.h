@@ -19,9 +19,11 @@ public:
 	int getEnemyHpMax();
 	int getEnemyHpNow();
 	void setEnemyHpNow(int input);
-	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
-	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus,int enemyHpNow);
-	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
+	//function would reset the hp to max
+	void resetEnemyHp();
+	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
+	friend void damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
+	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
 };
 
 

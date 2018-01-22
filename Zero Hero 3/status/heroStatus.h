@@ -119,9 +119,9 @@ public:
 	 * I made the battle be friend of Heroclass,	*
 	 * cos I need change lot for herostatus 		*
 	 ************************************************/
-	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
-	friend int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
-	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow);
+	friend void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
+	friend void damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
+	friend void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus);
 	friend void battleReward(HeroStatus* heroStatus, Bag* bag, int step);
 
 	//overloading input and output opera for save

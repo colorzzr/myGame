@@ -11,9 +11,9 @@
 using namespace std;
 
 void sleep(int s) ;
-void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow){
+void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus){
 	cout << "************************************" << endl;
-   	cout << "*   0         1      * Hp: " << enemyHpNow << "/" << enemyStatus->enemyHPMax << "     *" << endl;
+   	cout << "*   0         1      * Hp: " << enemyStatus->enemyHPNow << "/" << enemyStatus->enemyHPMax << "     *" << endl;
     cout << "*  /|\\       /|\\     * attack: " << enemyStatus->attack << "   *" << endl;
     cout << "*  / \\       / \\     * defence: " << enemyStatus->defence << "  *" << endl;
 	cout << "***************************************" << endl;
@@ -23,10 +23,10 @@ void battleAnimationWait(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int e
     cout << "***************************************" << endl;
 }
 
-void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow){
+void battleAnimationHit(HeroStatus* heroStatus, EnemyStatus* enemyStatus){
     system("clear");
     cout << "************************************" << endl;
-    cout << "*   0         1      * Hp: " << enemyHpNow << "/" << enemyStatus->enemyHPMax << "     *" << endl;
+    cout << "*   0         1      * Hp: " << enemyStatus->enemyHPNow << "/" << enemyStatus->enemyHPMax << "     *" << endl;
     cout << "*  /|\\";
     //change the color of hit '------>'
 
@@ -63,17 +63,17 @@ void openAnimation(){
 
 }
 
-int damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus, int enemyHpNow){
+void damageCalcu(HeroStatus* heroStatus, EnemyStatus* enemyStatus){
     
     srand(heroStatus->heroHPMax * heroStatus-> heroHPNow);
     //simply strength - defence and some flucuate
-    enemyHpNow = enemyHpNow - (heroStatus->STR - enemyStatus->defence + (rand() % 3 - 1));
+    enemyStatus->enemyHPNow = enemyStatus->enemyHPNow - (heroStatus->STR - enemyStatus->defence + (rand() % 3 - 1));
     //here default hero attack first
-    if (enemyHpNow > 0) {
+    if (enemyStatus->enemyHPNow > 0) {
         //simply strength - defence and some flucuate
         heroStatus->heroHPNow = heroStatus->heroHPNow - (heroStatus->physicalDefense + (rand() % 2 - 1));
     }
-    return enemyHpNow;
+    //return enemyStatus->enemyHPNow;
 }
 
 void battleReward(HeroStatus* heroStatus, Bag* bag, int step){

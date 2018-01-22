@@ -87,6 +87,14 @@ working on the skill in battle
 
 fix all bugs and memory leak
 
+### Beta 1.2.5 2018.1.21
+
+add the enemyHpNow and change all corrosponding variable in battle
+
+remove the local varibal enemyHpnow
+
+fix the bug of two locations when loading the save
+
 
 
 

@@ -93,12 +93,12 @@ void Field::getHeroLoc(){
 //note here more battle animation is inside the battle.cpp
 bool Field::battleEngage(){
 	bool youDie = false;
-	int enemyHpNow = enemyStatus->getEnemyHpMax();
+	//int enemyHpNow = enemyStatus->getEnemyHpMax();
 	char command;
 	openAnimation();
 	while(1){
 		//print battle window
-		battleAnimationWait(heroStatus, enemyStatus, enemyHpNow);
+		battleAnimationWait(heroStatus, enemyStatus);
 		//print help window
 		if(step < 2) cout << "type 'u' to attack enemy" << endl;
 
@@ -116,10 +116,11 @@ bool Field::battleEngage(){
 		}
 		//attack
 		else if(command == 'a'){
-			battleAnimationHit(heroStatus,enemyStatus,enemyHpNow);
-			enemyHpNow = damageCalcu(heroStatus, enemyStatus, enemyHpNow);
-			if (enemyHpNow <= 0) {
+			battleAnimationHit(heroStatus,enemyStatus);
+			damageCalcu(heroStatus, enemyStatus);
+			if (enemyStatus->getEnemyHpNow() <= 0) {
 				battleReward(heroStatus, bag, step);
+				enemyStatus->resetEnemyHp();
 				cout << "You win !" << endl;
 				break;
 			}
@@ -363,6 +364,9 @@ bool Field::loadSaved(){
 			load >> row >> col;
 			map[row][col] = '1';
 		}while(row != 10);
+		//remove the heroloc by initial
+		map[heroLocX][heroLocY] = '-';
+		
 		load >> heroLocX >> heroLocY;
 		map[heroLocX][heroLocY] = '0';
 		//load the heroStatus and it is a pointer
